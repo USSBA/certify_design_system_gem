@@ -1,0 +1,14 @@
+*.gem
+.bundle
+.sass-cache
+.DS_Store
+_site
+Gemfile.lock
+test/dummy_rails/public/assets/*
+test/dummy_rails/tmp/*
+test/dummy_rails/log/*
+test/dummy_jekyll/_site
+tmp/*.png
+test/dummy_jekyll/assets/bourbon
+test/dummy_jekyll/.jekyll-cache
+test/dummy_jekyll/delete

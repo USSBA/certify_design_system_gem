@@ -1,0 +1,40 @@
+// Turn off Deprecation warnings from Bourbon
+$output-bourbon-deprecation-warnings: false !default;
+// require Bourbon 4.3.4 (files installed)
+@import "bourbon";
+
+@import "settings/all";
+
+// Let's start testing some of the new V2 components
+@import "base/variables";
+@import "base/fonts";
+@import "utilities/spacing";
+@import "utilities/background-color";
+@import "utilities/borders";
+@import "utilities/color";
+@import "utilities/flexbox";
+@import "utilities/inputs";
+@import "utilities/layout";
+@import "utilities/measure";
+@import "utilities/margins";
+@import "utilities/padding";
+@import "utilities/visibility";
+@import "base/base";
+@import "layouts/layout";
+@import "components/alerts";
+@import "components/badges";
+@import "components/breadcrumbs";
+@import "components/buttons";
+@import "components/cards";
+@import "components/forms";
+@import "components/icons";
+@import "components/lists";
+@import "components/pagination";
+@import "components/questionnaire";
+@import "components/spinners";
+@import "components/tables";
+@import "components/taskbar";
+@import "components/task-panels";
+
+// Shame
+@import "shame/shame";

@@ -1,0 +1,10 @@
+---
+---
+{ "files" : 
+[
+{% for item in assets %}
+"{{  item[0] }}",
+{% endfor %}
+null
+]
+}

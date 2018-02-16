@@ -1,0 +1,65 @@
+/* stylelint-disable at-rule-empty-line-before */
+@include font-face(
+  'Source Sans Pro',
+  'sourcesanspro-light-webfont',
+  300,
+  normal,
+  $file-formats: eot woff2 woff ttf
+);
+
+@include font-face(
+  'Source Sans Pro',
+  'sourcesanspro-regular-webfont',
+  400,
+  normal,
+  $file-formats: eot woff2 woff ttf
+);
+
+@include font-face(
+  'Source Sans Pro',
+  'sourcesanspro-italic-webfont',
+  400,
+  italic,
+  $file-formats: eot woff2 woff ttf
+);
+
+@include font-face(
+  'Source Sans Pro',
+  'sourcesanspro-bold-webfont',
+  700,
+  normal,
+  $file-formats: eot woff2 woff ttf
+);
+
+@include font-face(
+  'Merriweather',
+  'merriweather-light-webfont',
+  300,
+  normal,
+  $file-formats: eot woff2 woff ttf
+);
+
+@include font-face(
+  'Merriweather',
+  'merriweather-regular-webfont',
+  400,
+  normal,
+  $file-formats: eot woff2 woff ttf
+);
+
+@include font-face(
+  'Merriweather',
+  'merriweather-italic-webfont',
+  400,
+  italic,
+  $file-formats: eot woff2 woff ttf
+);
+
+@include font-face(
+  'Merriweather',
+  'merriweather-bold-webfont',
+  700,
+  normal,
+  $file-formats: eot woff2 woff ttf
+);
+/* stylelint-enable */

@@ -1,0 +1,18 @@
+# Welcome to Jekyll!
+
+title: Dummy Jekyll
+
+sass:
+    sass_dir: assets
+
+plugins:
+  - jekyll-assets
+  - certify_design_system
+  
+assets: 
+  digest: false
+  sources: 
+    - app/assets/javascripts
+    - app/assets/stylesheets
+    - app/assets/fonts
+    - app/assets/images
