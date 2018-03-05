@@ -1,0 +1,50 @@
+// Status Cards
+.sba-c-guidance {
+  background: $color-primary-alt-lightest;
+  border: 1px solid $color-primary-darkest;
+  padding: 2rem;
+}
+
+.sba-c-guidance__header {
+  margin-bottom: 2rem;
+}
+
+.sba-c-guidance__primary-heading {
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.sba-c-guidance__section {
+  border-top: 1px solid $color-primary-darkest;
+
+  &:last-child > p:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.sba-c-guidance--warning {
+  background: $color-gold-lightest;
+  border-color: $color-gold;
+
+  .sba-c-guidance__section {
+    border-color: $color-gold;
+  }
+}
+
+.sba-c-guidance--success {
+  background: $color-green-lightest;
+  border-color: $color-green;
+
+  .sba-c-guidance__section {
+    border-color: $color-green;
+  }
+}
+
+.sba-c-guidance--emergency {
+  background: $color-secondary-lightest;
+  border-color: $color-secondary;
+
+  .sba-c-guidance__section {
+    border-color: $color-secondary;
+  }
+}
