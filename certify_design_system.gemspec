@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['david_m_acevedo@omb.eop.gov', 'jared_c_cunha@omb.eop.gov']
 
   spec.summary       = 'asset delivery gem'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/USSBA/certify_design_system_gem"
   spec.licenses      = ['MIT', 'OFL-1.1', 'CC-BY-4.0', 'CC0-1.0']
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(/^(assets|_layouts|_includes|_sass|LICENSE|README)/i) }
