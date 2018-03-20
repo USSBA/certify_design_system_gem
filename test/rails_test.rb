@@ -21,6 +21,7 @@ class RailsTest < ActionDispatch::IntegrationTest
     screenshot!
 
     # assert screenshot_equals_test_screenshot
+    assert screenshot_contains_right_colors
   end
 
   def test_autoprefixer

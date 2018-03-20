@@ -21,19 +21,13 @@ module DummyRailsIntegration
 
   # rubocop:disable Metrics/AbcSize
   def screenshot!
-    # Capybara::RackTest::Driver
+    ## Chromedriver and Geckodriver only:
+    raise 'Unable To Take Screenshot' unless page.driver.respond_to? :save_screenshot
     path = "tmp/#{name}.png"
-    FileUtils.mkdir "tmp" unless Dir.exists? "tmp" #This may be the source of Jared's error.
-    if page.driver.respond_to? :render
-      ## Phantom JS
-      page.driver.render(File.join(GEM_PATH, path), full: false)
-    elsif page.driver.respond_to? :save_screenshot
-      ## Chromedriver and Geckodriver
-      page.driver.browser.manage.window.size = Selenium::WebDriver::Dimension.new(800, 600)
-      page.driver.save_screenshot(File.join(GEM_PATH, path))
-    else
-      raise 'Unable To Take Screenshot'
-    end
+    FileUtils.mkdir 'tmp' unless Dir.exist? 'tmp' # This may be the source of Jared's error.
+    ## Chromedriver and Geckodirver will have different dimensions regarless of call below.
+    page.driver.browser.manage.window.size = Selenium::WebDriver::Dimension.new(800, 600)
+    page.driver.save_screenshot(File.join(GEM_PATH, path))
     STDERR.puts "Screenshot saved to #{path}"
   end
   # rubocop:enable Metrics/AbcSize
@@ -62,6 +56,16 @@ module DummyRailsIntegration
     grey == screenshot.compose(inverted_screenshot)
   end
   # rubocop:enable Metrics/AbcSize
+
+  # This test reads one file.
+  def screenshot_contains_right_colors
+    # Can test CSS, Image Loading, and SVG Sprite if colored uniquely
+    # Can't test Fonts.
+    screenshot = ChunkyPNG::Image.from_file "tmp/#{name}.png"
+    screenshot.palette.include?(ChunkyPNG::Color.from_hex('#0071bc')) &&
+      screenshot.palette.include?(ChunkyPNG::Color.from_hex('#e31c3d')) &&
+      screenshot.palette.include?(ChunkyPNG::Color.from_hex('#02bfe7'))
+  end
 
   private
 
