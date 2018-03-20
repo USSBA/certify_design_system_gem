@@ -64,7 +64,8 @@ module DummyRailsIntegration
     screenshot = ChunkyPNG::Image.from_file "tmp/#{name}.png"
     screenshot.palette.include?(ChunkyPNG::Color.from_hex('#0071bc')) &&
       screenshot.palette.include?(ChunkyPNG::Color.from_hex('#e31c3d')) &&
-      screenshot.palette.include?(ChunkyPNG::Color.from_hex('#02bfe7'))
+      screenshot.palette.include?(ChunkyPNG::Color.from_hex('#02bfe7')) &&
+      screenshot.palette.include?(ChunkyPNG::Color.from_hex('#fdb81e'))
   end
 
   private
