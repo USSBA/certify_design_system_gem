@@ -23,7 +23,7 @@ module DummyRailsIntegration
   def screenshot!
     # Capybara::RackTest::Driver
     path = "tmp/#{name}.png"
-    FileUtils.mkdir "tmp"
+    FileUtils.mkdir "tmp" unless Dir.exists? "tmp" #This may be the source of Jared's error.
     if page.driver.respond_to? :render
       ## Phantom JS
       page.driver.render(File.join(GEM_PATH, path), full: false)

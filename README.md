@@ -150,12 +150,12 @@ Additionally all the fonts need to me added individually:
 ```
 {% asset sourcesanspro-regular-webfont.ttf %}
 {% asset sourcesanspro-regular-webfont.woff %}
-{% asset sourcesanspro-regular-webfont.woff2%}
+{% asset sourcesanspro-regular-webfont.woff2 %}
 {% asset sourcesanspro-regular-webfont.eot %}
 
 {% asset sourcesanspro-bold-webfont.ttf %}
 {% asset sourcesanspro-bold-webfont.woff %}
-{% asset sourcesanspro-bold-webfont.woff2%}
+{% asset sourcesanspro-bold-webfont.woff2 %}
 {% asset sourcesanspro-bold-webfont.eot %}
 ```
 
