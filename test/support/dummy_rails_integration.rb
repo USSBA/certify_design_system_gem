@@ -68,6 +68,13 @@ module DummyRailsIntegration
       screenshot.palette.include?(ChunkyPNG::Color.from_hex('#fdb81e'))
   end
 
+  def screenshot_contains_no_black
+    # Tests Fonts by overlaying a white font over a black font image.
+    screenshot = ChunkyPNG::Image.from_file "tmp/#{name}.png"
+    not screenshot.palette.include?(ChunkyPNG::Color.from_hex('#000000'))
+  end
+
+
   private
 
   def cleanup_dummy_rails_files
