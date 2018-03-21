@@ -17,7 +17,7 @@ class RailsTest < ActionDispatch::IntegrationTest
   end
 
   def test_colors_on_screenshot
-    ## Verifies colors load: CSS, image and potentially svg. Fonts untested.
+    ## Verifies colors load: CSS, Image and Svg. Fonts untested.
     visit root_path
     screenshot!
 
@@ -25,11 +25,10 @@ class RailsTest < ActionDispatch::IntegrationTest
   end
 
   def test_fonts_screenshot
-    # skip
+    ## Verifies fonts loaded. 
     visit '/fonts'
     screenshot!
-    # assert screenshot_equals_test_screenshot
-    # ^ Very slow image match, brittle due to browser & compression differences.
+
     assert screenshot_contains_no_black
   end
 
