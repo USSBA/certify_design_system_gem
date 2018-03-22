@@ -7,24 +7,33 @@ require 'pry'
 class RailsTest < ActionDispatch::IntegrationTest
   include ::DummyRailsIntegration
   def test_js_loaded
-    ## Verifies all assest load and display.
+    ## Verifies JavaScript loaded.
     visit root_path
-    # ^ will raise on JS errors but not with Chrome Driver
+
     assert_silent do
       execute_script 'certifyDesignSystem === true;'
       # ^ throws error if JS not loaded.
     end
   end
 
-  def test_screenshot
+  def test_colors_on_screenshot
+    ## Verifies colors load: CSS, Image and Svg. Fonts untested.
     visit root_path
     screenshot!
 
-    assert screenshot_equals_test_screenshot
+    assert screenshot_contains_right_colors
+  end
+
+  def test_fonts_screenshot
+    ## Verifies fonts loaded. 
+    visit '/fonts'
+    screenshot!
+
+    assert screenshot_contains_no_black
   end
 
   def test_autoprefixer
-    ## Checks it adds Browser Prefixes.
+    ## Checks that Browser Prefixes are added.
     suppress_output do
       get ActionController::Base.helpers.stylesheet_path('application.css')
     end
