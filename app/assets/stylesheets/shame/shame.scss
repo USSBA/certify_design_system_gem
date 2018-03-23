@@ -19,3 +19,11 @@
   height: auto;
   margin: 0;
 }
+
+
+.sba-c-timeline .sba-c-timeline__list__item,
+.sba-c-timeline .sba-c-timeline__list__item:first-child,
+.sba-c-timeline .sba-c-timeline__list__item--current,
+.sba-c-timeline .sba-c-timeline__list__item--current:first-child {
+  padding: 1rem 3rem;
+}
