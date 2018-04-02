@@ -1,9 +1,118 @@
 .sba-c-doc-upload-container {
   max-width: 80rem;
-  margin: 0 0 1em 0;
+}
+
+.sba-c-doc-upload {
+  background: white;
+  border: 1px solid $color-gray-lighter;
+  border-radius: 2px;
+  /*box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);*/
+  position: relative;
+  padding: 1.5em;
+
+  &.open {
+    background: #F8FCFF;
+    /*background: $color-primary-alt-lightest;*/
+  }
+}
+
+.sba-c-doc-upload__primary-heading h3 {
+  display: inline;
+}
+
+.sba-c-doc-upload__primary-heading h3,
+.sba-c-doc-upload__primary-heading span {
+  display: inline;
+}
+
+.sba-c-doc-upload__primary-heading span {
+  margin-left: 1rem;
+}
+
+.sba-c-doc-upload__primary-heading p {
+  margin: 0;
+  padding: 0;
 }
 
 .sba-c-doc-upload--completed {
   border: 1px solid $color-green-light;
   background: $color-green-lightest;
 }
+
+.sba-c-doc-upload__toggle {
+  position: absolute;
+  right: 0;
+  top: 2em;
+}
+
+.sba-c-doc-upload__content {
+  display: none;
+  margin-top: 3rem;
+}
+
+.sba-c-doc-upload__content em {
+  display: block;
+}
+
+.sba-c-doc-upload__content.visible {
+  display: block;
+}
+
+.sba-c-doc-upload__content textarea {
+  width: 100%;
+  border: 1px solid $color-gray-lighter;
+}
+
+.sba-c-doc-upload__file-input {
+  background: $color-white;
+  min-width: 80%;
+  min-height: 8rem;
+  text-align: center;
+  border: 1px dashed $color-gray-lighter;
+}
+
+.sba-c-doc-upload__content label {
+  display: inline-block;
+  font-weight: 700;
+  color: $color-gray;
+  border: 1px solid $color-gray-lightest;
+  border-bottom: none;
+  background: $color-gray-lighter;
+  padding: 15px;
+  margin: 0;
+}
+
+.sba-c-doc-upload__content label::before {
+  display: none;
+}
+
+.sba-c-doc-upload__content label:hover {
+  cursor: pointer;
+}
+
+.sba-c-doc-upload__content input:checked + label {
+  color: $color-base;
+  background-color: $color-white;
+}
+
+.sba-c-doc-upload__file-list p {
+  margin: 0;
+  padding: 0;
+}
+
+.sba-c-doc-upload__content section {
+  background-color: $color-white;
+  display: none;
+  margin: -1px 0 5rem 0;
+  padding: 2em;
+  border: 1px solid $color-gray-lightest;
+}
+
+#new-file:checked ~ #new-file,
+#existing-file:checked ~ #existing-file {
+  display: block;
+}
+
+
+
+
