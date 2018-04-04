@@ -1,5 +1,5 @@
 .sba-c-doc-upload-container {
-  max-width: 80rem;
+  max-width: 75rem;
 }
 
 .sba-c-doc-upload {
@@ -60,22 +60,38 @@
 
 .sba-c-doc-upload__content textarea {
   width: 100%;
+  max-width: 100%;
   border: 1px solid $color-gray-lighter;
 }
 
 .sba-c-doc-upload__file-input {
+  display: flex;
   background: $color-white;
   min-width: 80%;
-  min-height: 8rem;
+  min-height: 12rem;
   text-align: center;
   border: 1px dashed $color-gray-lighter;
+}
+
+.sba-c-doc-upload__file-input span {
+  margin: auto;
+}
+
+.sba-c-doc-upload__file-input > span > label {
+  cursor: pointer;
+  background: transparent;
+  color: $color-primary;
+  text-decoration: underline;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .sba-c-doc-upload__content label {
   display: inline-block;
   font-weight: 700;
   color: $color-gray;
-  border: 1px solid $color-gray-lightest;
+  border: 1px solid $color-gray-lighter;
   border-bottom: none;
   background: $color-gray-lighter;
   padding: 15px;
@@ -105,7 +121,7 @@
   display: none;
   margin: -1px 0 5rem 0;
   padding: 2em;
-  border: 1px solid $color-gray-lightest;
+  border: 1px solid $color-gray-lighter;
 }
 
 #new-file:checked ~ #new-file,
