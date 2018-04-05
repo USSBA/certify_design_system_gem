@@ -231,7 +231,8 @@ Then the fonts search for in `assets/stylesheets` thus you'll have to load them 
 Run `bundle install` and `bundle exec rake test` to run all tests. 
 
 ## Changelog
-This gem uses semantic versioning. Version is stored in `lib/certify_design_system/version.rb`.
+This gem uses semantic versioning. Version is stored in `lib/certify_design_system/version.rb`.  
+Please look at the [releases page](https://github.com/USSBA/certify_design_system_gem/releases) for information on the version releases.
 
 ## License 
 
@@ -239,7 +240,7 @@ Please look at [LICENSES.md](/LICENSES.md) for full License information.
 
 ## Contributing
 
-Contributions for the Certify Design System should be made on that repository.
+Please look at [CONTRIBUTING.md](/CONTRIBUTING.md) for information on how to contribute. 
 
 ## Security Issues
 
