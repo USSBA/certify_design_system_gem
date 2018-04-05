@@ -76,7 +76,7 @@ further defined and clarified by project maintainers.
 ### Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by opening an issue and tagging the [administrators](https://github.com/USSBA/certify_design_system_gem/wiki/Gem-Administration) . All complaints will be reviewed and investigated and will result in a response that
+reported by opening an issue and tagging the [administrators](https://github.com/USSBA/certify_design_system_gem/wiki/Gem-Administration) or if confidentiality is required emailing [Jared Cunha](mailto:Jared_C_Cunha@omb.eop.gov). All complaints will be reviewed and investigated and will result in a response that
 is deemed necessary and appropriate to the circumstances. The project team is
 obligated to maintain confidentiality with regard to the reporter of an incident.
 Further details of specific enforcement policies may be posted separately.
