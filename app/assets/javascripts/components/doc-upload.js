@@ -7,7 +7,7 @@ $(document).ready(function(){
       hidden_class = "hidden";
 
   // Function for handling doc upload
-  $doc_upload_toggle.on('click', function(){
+  $doc_upload_toggle.on('click', function() {
 
     // Determine which task panel we clicked on
     elem = $(this).attr("aria-controls")
@@ -31,5 +31,11 @@ $(document).ready(function(){
     })
 
   });
+
+  // Function for handling generic doc upload
+  $('#generic-doc-upload').on('click', function() {
+    $('#doc-upload3').addClass(open_class);
+    $('#doc-upload3 sba-c-doc-upload__content').addClass(open_class);
+  })
 
 });
