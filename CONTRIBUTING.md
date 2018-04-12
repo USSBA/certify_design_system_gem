@@ -5,7 +5,7 @@ General guidance for contributing, including information on how to propose new p
 ## Feedback
 
 To provide feedback on the code, please create an issue on GitHub. 
-For other issues, please contactthe [Certify Help Desk](mailto:help@certify.sba.gov).
+For other issues, please contact the [Certify Help Desk](mailto:help@certify.sba.gov).
 
 ## How to Contribute
 
