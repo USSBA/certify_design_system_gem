@@ -20,10 +20,16 @@ This gem supplies the Certify Design System Assets to either Jekyll or Rails app
 
 Add this line to your application's Gemfile:
 
-For Development use the unpacked gem
+For Development use the unpacked gem:
 
 ```ruby
 gem 'certify_design_system', path: "#{path_to_upacked_gem_files}"
+```
+
+Or use the GitHub Repository:
+
+```ruby
+gem 'certify_design_system', git: 'git@github.com:USSBA/certify_design_system_gem.git', branch: 'master'
 ```
 
 And then execute:
