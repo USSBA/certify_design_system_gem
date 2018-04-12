@@ -240,7 +240,14 @@ Please look at [LICENSES.md](/LICENSES.md) for full License information.
 
 ## Contributing
 
-Please look at [CONTRIBUTING.md](/CONTRIBUTING.md) for information on how to contribute. 
+Please look at [CONTRIBUTING.md](/CONTRIBUTING.md) for information on how to contribute.
+
+We strive for a welcoming and inclusive environment for the HUBZone-WebMap project.
+
+Please follow this guidelines in all interactions:
+
+1. Be Respectful: use welcoming and inclusive language.
+2. Assume best intentions: seek to understand other's opinions.
 
 ## Security Issues
 
