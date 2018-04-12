@@ -23,3 +23,8 @@ For documentation changes, use the [Certify Design System Documentation Site](ht
 
 Contributions should include appropriate tests or updated tests.
 
+To run [Poirot](https://github.com/emanuelfeld/poirot) to check commits for sensitive information run:
+
+`poirot --patterns test/poirot-patterns.txt --revlist="develop^..HEAD"`
+
+
