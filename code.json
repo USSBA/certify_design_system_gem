@@ -1,12 +1,12 @@
 {
   "version": "2.0.0",
-  "measurementType": { "method": "linesOfCode" },
+  "measurementType": { "method": "projects" },
   "agency": "SBA",
   "releases": [
     {
       "name": "Certify Design System Gem",
       "repositoryURL": "https://github.com/USSBA/certify-design-system-gem",
-      "description": "TODO: add description.",
+      "description": "Ruby Gem that delivers assets of the Certify Design System to Rails and Jekyll.",
       "permissions": {
         "licenses": [
           {
