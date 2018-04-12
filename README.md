@@ -248,7 +248,7 @@ Please look at [LICENSES.md](/LICENSES.md) for full License information.
 
 Please look at [CONTRIBUTING.md](/CONTRIBUTING.md) for information on how to contribute.
 
-We strive for a welcoming and inclusive environment for the HUBZone-WebMap project.
+We strive for a welcoming and inclusive environment for the Certify Design System project.
 
 Please follow this guidelines in all interactions:
 
