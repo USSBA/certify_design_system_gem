@@ -20,10 +20,16 @@ This gem supplies the Certify Design System Assets to either Jekyll or Rails app
 
 Add this line to your application's Gemfile:
 
-For Development use the unpacked gem
+For Development use the unpacked gem:
 
 ```ruby
 gem 'certify_design_system', path: "#{path_to_upacked_gem_files}"
+```
+
+Or use the GitHub Repository:
+
+```ruby
+gem 'certify_design_system', git: 'git@github.com:USSBA/certify_design_system_gem.git', branch: 'master'
 ```
 
 And then execute:
@@ -231,7 +237,8 @@ Then the fonts search for in `assets/stylesheets` thus you'll have to load them 
 Run `bundle install` and `bundle exec rake test` to run all tests. 
 
 ## Changelog
-This gem uses semantic versioning. Version is stored in `lib/certify_design_system/version.rb`.
+This gem uses semantic versioning. Version is stored in `lib/certify_design_system/version.rb`.  
+Please look at the [releases page](https://github.com/USSBA/certify_design_system_gem/releases) for information on the version releases.
 
 ## License 
 
@@ -239,7 +246,14 @@ Please look at [LICENSES.md](/LICENSES.md) for full License information.
 
 ## Contributing
 
-Contributions for the Certify Design System should be made on that repository.
+Please look at [CONTRIBUTING.md](/CONTRIBUTING.md) for information on how to contribute.
+
+We strive for a welcoming and inclusive environment for the Certify Design System project.
+
+Please follow this guidelines in all interactions:
+
+1. Be Respectful: use welcoming and inclusive language.
+2. Assume best intentions: seek to understand other's opinions.
 
 ## Security Issues
 

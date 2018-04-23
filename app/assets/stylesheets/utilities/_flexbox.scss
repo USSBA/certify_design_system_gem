@@ -208,3 +208,42 @@ $_flex-wrap-values: (nowrap: nowrap, wrap: wrap, reverse: wrap-reverse);
     }
   }
 }
+
+/*
+Flex-direction
+
+> The flex-direction CSS property specifies how flex items are placed in the flex container defining the main axis and the direction (normal or reversed). [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)
+
+The classes follow the format: `sba-u-flex-direction--{value}` and `sba-u-{breakpoint}-flex-direction--{value}` where `breakpoint` is one of the [breakpoint prefixes]({{root}}/guidelines/responsive), and `value` is one of:
+
+- `row` (browser default)
+- `row-reverse`
+- `column`
+- `column-reverse`
+
+*/
+$_flex-direction-values: (column: column, row: row, column-reverse: column-reverse, row-reverse: row-reverse);
+
+@each $name in map-keys($_flex-direction-values) {
+  $value: map-get($_flex-direction-values, $name);
+  // Example: .sba-u-flex-wrap--start
+  .sba-u-flex-direction--#{$name} {
+    // Example: flex-wrap: flex-start
+    @include flex-direction($value !important);
+  }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  $viewport: map-get($breakpoints, $breakpoint);
+
+  @media (min-width: $viewport) {
+    @each $name in map-keys($_flex-direction-values) {
+      $value: map-get($_flex-direction-values, $name);
+      // Example: .sba-u-lg-flex-wrap--start
+      .sba-u-#{$breakpoint}-flex-direction--#{$name} {
+        // Example: flex-wrap: flex-start
+        @include flex-direction($value !important);
+      }
+    }
+  }
+}
