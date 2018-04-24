@@ -9,22 +9,13 @@
   position: relative;
   padding: 1.5em 2.25em;
 
-  &.open {
-    background: #F8FCFF;
+  &.is-open {
+    background: $color-background-primary-muted;
   }
 }
 
 .sba-c-doc-upload__primary-heading h3 {
   display: inline;
-}
-
-.sba-c-doc-upload__primary-heading h3,
-.sba-c-doc-upload__primary-heading span {
-  display: inline;
-}
-
-.sba-c-doc-upload__primary-heading span {
-  margin-left: 1rem;
 }
 
 .sba-c-doc-upload__primary-heading p {
@@ -43,38 +34,27 @@
   margin-top: 3rem;
 }
 
-.sba-c-doc-upload__content.visible {
+.sba-c-doc-upload__content.is-visible {
   display: block;
-}
-
-.sba-c-doc-upload__content em {
-  display: block;
-}
-
-.sba-c-doc-upload__content label {
-  display: inline-block;
 }
 
 .sba-c-doc-upload__content p {
   margin-bottom: .5em;
 }
 
-.sba-c-doc-upload__file-input {
+.sba-c-doc-upload__uploader {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
   background: $color-white;
-  min-width: 80%;
   min-height: 12rem;
   text-align: center;
   border: 1.5px dashed $color-gray;
 }
 
-.sba-c-doc-upload__file-input span {
-  margin: auto;
-}
-
-.sba-c-doc-upload__file-input > span > label {
+.sba-c-doc-upload__uploader--input {
+  display: inline-block;
   cursor: pointer;
-  background: transparent;
   color: $color-primary;
   text-decoration: underline;
   border: none;
@@ -82,22 +62,17 @@
   padding: 0;
 }
 
-.sba-c-doc-upload__file-list p {
-  margin: 0;
-  padding: 0;
-}
-
-.sba-c-doc-upload__completed {
+.sba-c-doc-upload--completed {
   border: 1px solid $color-green-light;
   background-color: $color-green-lightest;
 }
 
-.sba-c-doc-upload__completed svg.sba-c-icon {
+.sba-c-doc-upload--completed svg.sba-c-icon {
   transform: scale(.75);
   fill: $color-green-light;
   margin-left: -25px;
 }
 
-.sba-c-doc-upload.sba-c-doc-upload__completed.open {
+.sba-c-doc-upload.sba-c-doc-upload--completed.is-open {
   background-color: $color-green-lightest;
 }
