@@ -1,0 +1,78 @@
+.sba-c-doc-upload-container {
+  max-width: 75rem;
+}
+
+.sba-c-doc-upload {
+  background: white;
+  border: 1px solid $color-gray-lighter;
+  border-radius: 2px;
+  position: relative;
+  padding: 1.5em 2.25em;
+
+  &.is-open {
+    background: $color-background-primary-muted;
+  }
+}
+
+.sba-c-doc-upload__primary-heading h3 {
+  display: inline;
+}
+
+.sba-c-doc-upload__primary-heading p {
+  margin: 0;
+  padding: 0;
+}
+
+.sba-c-doc-upload__toggle {
+  position: absolute;
+  right: 0;
+  top: 2em;
+}
+
+.sba-c-doc-upload__content {
+  display: none;
+  margin-top: 3rem;
+}
+
+.sba-c-doc-upload__content.is-visible {
+  display: block;
+}
+
+.sba-c-doc-upload__content p {
+  margin-bottom: .5em;
+}
+
+.sba-c-doc-upload__uploader {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: $color-white;
+  min-height: 12rem;
+  text-align: center;
+  border: 1.5px dashed $color-gray;
+}
+
+.sba-c-doc-upload__uploader--input {
+  display: inline-block;
+  cursor: pointer;
+  color: $color-primary;
+  text-decoration: underline;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sba-c-doc-upload--completed {
+  border: 1px solid $color-green-light;
+  background-color: $color-green-lightest;
+}
+
+.sba-c-doc-upload--completed svg.sba-c-icon {
+  transform: scale(.75);
+  fill: $color-green-light;
+  margin-left: -25px;
+}
+
+.sba-c-doc-upload.sba-c-doc-upload--completed.is-open {
+  background-color: $color-green-lightest;
+}

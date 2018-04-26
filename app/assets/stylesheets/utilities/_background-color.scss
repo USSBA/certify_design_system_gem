@@ -53,6 +53,10 @@ Style guide: utilities.background-color
   background-color: $color-primary-darkest !important;
 }
 
+.sba-u-bgcolor--primary-muted {
+  background-color: $color-background-primary-muted !important;
+}
+
 // primary-alt
 .sba-u-bgcolor--primary-alt {
   background-color: $color-primary-alt !important;
