@@ -76,3 +76,53 @@
 .sba-c-doc-upload.sba-c-doc-upload--completed.is-open {
   background-color: $color-green-lightest;
 }
+
+
+
+
+.sba-c-doc-upload--custom {
+  background-color: $color-background-primary-muted;
+}
+
+.sba-c-doc-upload--custom label.sba-c-doc-upload__tab {
+  display: inline-block;
+  font-weight: 700;
+  color: #5b616b;
+  border: 1px solid #d6d7d9;
+  border-bottom: none;
+  background: #d6d7d9;
+  padding: 15px;
+  margin-bottom: 0;
+}
+
+.sba-c-doc-upload--custom input:checked + label {
+  color: #212121;
+  background-color: #ffffff;
+}
+
+.sba-c-doc-upload--custom label::before {
+  display: none;
+}
+
+.sba-c-doc-upload--custom label:hover {
+  cursor: pointer;
+}
+
+
+.sba-c-doc-upload__file-list p {
+  margin: 0;
+  padding: 0;
+}
+
+.sba-c-doc-upload--custom section {
+  background-color: #ffffff;
+  display: none;
+  margin: -1px 0 5rem 0;
+  padding: 2em;
+  border: 1px solid #d6d7d9;
+}
+
+#new-file:checked ~ #new-file,
+#existing-file:checked ~ #existing-file {
+  display: block;
+}
