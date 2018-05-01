@@ -1,0 +1,42 @@
+.sba-c-facet-set {
+  margin-bottom: $multiple * 2;
+}
+
+.sba-c-facet-set__legend {
+  border-bottom: 1px solid $color-gray-lighter;
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-bottom: $multiple / 2;
+  width: 100%;
+}
+
+.sba-c-facet-set__legend--l2 {
+  border-bottom: 0;
+  color: $color-gray;
+  padding: 0;
+}
+
+.sba-c-facet-pill {
+  background: $color-primary-alt-lightest;
+  border-radius: 4px;
+  color: $color-primary-alt-darkest;
+  display: inline-block;
+  margin-right: $multiple;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  padding: 8px 0 8px 8px;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.sba-c-facet-pill__close-button,
+.sba-c-facet-pill__close-button:hover {
+  background: transparent;
+  border-left: 1px solid $color-primary-alt-darkest;
+  border-radius: 0;
+  color: $color-primary-alt-darkest;
+  margin: 0 0 0 8px;
+  padding: 0 8px;
+  font-size: 1.3rem;
+  width: auto;
+}

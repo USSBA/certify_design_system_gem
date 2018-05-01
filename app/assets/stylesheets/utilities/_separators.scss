@@ -1,0 +1,28 @@
+/*
+Separators
+
+Use the padding utility to change an element's padding.
+
+**Format**: `sba-u-separator--[MULTIPLE]`
+
+[Read more about how the design system approaches spacing here.]({{root}}/layout/spacing)
+
+@hide-markup
+
+Markup:
+  <code>sba-u-separator--<%= i %></code>
+</div>
+<% } -%>
+<% }) -%>
+*/
+@for $i from 1 through length($spacers) {
+  $size: #{nth($spacers, $i)};
+  $scale: #{$i - 1};
+
+  // Example: sba-u-separator--0
+  .sba-u-separator--#{$scale} {
+    // Example: padding: 0 !important;
+    display: inline-block;
+    padding: 0 #{$size} !important;
+  }
+}

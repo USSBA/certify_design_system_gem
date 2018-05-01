@@ -1,0 +1,66 @@
+/*
+Text alignment
+
+Align text using the `text-align` utility.
+
+**Format**: `sba-u-text-align--[VALUE]`
+
+Markup:
+<div class="sba-u-text-align--center">
+  <code class="preview__label">sba-u-text-align--center</code>
+  Center
+</div>
+<div class="sba-u-text-align--left">
+  <code class="preview__label">sba-u-text-align--left</code>
+  Left
+</div>
+<div class="sba-u-text-align--right">
+  <code class="preview__label">sba-u-text-align--right</code>
+  Right
+</div>
+
+Style guide: utilities.text-align
+*/
+.sba-u-text-align--center {
+  text-align: center !important;
+}
+
+.sba-u-text-align--left {
+  text-align: left !important;
+}
+
+.sba-u-text-align--right {
+  text-align: right !important;
+}
+
+/*
+Responsive text alignment
+
+@responsive
+
+Use a [breakpoint prefix]({{root}}/guidelines/responsive) to change the text alignment at specific breakpoints.
+
+Markup:
+<div class="sba-u-sm-text-align--center sba-u-md-text-align--left sba-u-lg-text-align--right">
+  {{lorem-s}}
+</div>
+
+Style guide: utilities.text-align.responsive
+*/
+@each $breakpoint in map-keys($breakpoints) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @media (min-width: $value) {
+    .sba-u-#{$breakpoint}-text-align--center {
+      text-align: center !important;
+    }
+
+    .sba-u-#{$breakpoint}-text-align--left {
+      text-align: left !important;
+    }
+
+    .sba-u-#{$breakpoint}-text-align--right {
+      text-align: right !important;
+    }
+  }
+}

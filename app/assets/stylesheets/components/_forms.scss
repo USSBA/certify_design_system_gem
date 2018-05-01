@@ -141,3 +141,12 @@ input[type=number] {
 .sba-c-label--error {
   margin-top: 0;
 }
+
+// Search
+.sba-c-search--large {
+  width: 30rem;
+
+  @include media($width-md) {
+    width: 75rem;
+  }
+}
