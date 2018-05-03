@@ -21,6 +21,21 @@ input[type=number] {
   top: .2rem
 }
 
+.sba-c-checkbox--indeterminate + .sba-c-label:before {
+  background-image: none !important;
+}
+
+.sba-c-checkbox--indeterminate + .sba-c-label:after {
+  content: "";
+  display: block;
+  width: 10px;
+  position: absolute;
+  height: 3px;
+  background: white;
+  left: 4px;
+  top: 9.5px;
+}
+
 // Form Hints
 .sba-c-form-hint {
   color: $color-gray;
@@ -140,4 +155,13 @@ input[type=number] {
 
 .sba-c-label--error {
   margin-top: 0;
+}
+
+// Search
+.sba-c-search--large {
+  width: 30rem;
+
+  @include media($width-md) {
+    width: 75rem;
+  }
 }
