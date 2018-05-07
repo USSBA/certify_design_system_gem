@@ -108,20 +108,20 @@
   cursor: pointer;
 }
 
-.sba-c-doc-upload__file-list .sba-c-field-list {
+.sba-c-doc-upload__document-list .sba-c-field-list {
   max-height: 25rem;
   overflow-y: scroll;
 }
 
-.sba-c-doc-upload__file-list .sba-c-field-list li {
+.sba-c-doc-upload__document-list .sba-c-field-list li {
   margin-left: 5px;
 }
 
-.sba-c-doc-upload__file-list label {
+.sba-c-doc-upload__document-list label {
   margin-top: .5rem;
 }
 
-.sba-c-doc-upload__file-list p {
+.sba-c-doc-upload__document-list p {
   margin: 0;
   padding: 0;
 }
@@ -134,7 +134,20 @@
   border: 1px solid #d6d7d9;
 }
 
-#new-file:checked ~ #new-file,
-#existing-file:checked ~ #existing-file {
+#new-document:checked ~ #new-document,
+#existing-document:checked ~ #existing-document {
   display: block;
+}
+
+
+.sba-c-doc-upload__document-confirm {
+  display: none;
+}
+
+.sba-c-doc-upload__document-confirm label:first-child {
+  margin-top: 0;
+}
+
+.sba-c-doc-upload__previously-uploaded input[type="text"] {
+  background-color: $color-white;
 }

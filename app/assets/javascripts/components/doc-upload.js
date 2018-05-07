@@ -1,6 +1,7 @@
 $(document).ready(function(){
   // Variables
   var $doc_upload_toggle = $('.sba-c-doc-upload__toggle'),
+      $doc_upload_use_toggle = $('.sba-c-doc-upload__use-toggle'),
       hidden_class = "hidden",
       open_class = "is-open",
       visible_class = "is-visible";
@@ -28,6 +29,26 @@ $(document).ready(function(){
       $toggle.removeClass(hidden_class);
       $target.parent().removeClass(open_class);
       $target.removeClass(visible_class);
+    })
+  });
+
+  // Function for handling previously uploaded custom docs
+  $doc_upload_use_toggle.on('click', function() {
+    elem = $(this).attr("aria-controls");
+    var $container = $(this).parent().parent();
+    var $cancel = $('button[aria-controls=' + elem + '-cancel]');
+    var $target = $("#" + elem);
+
+    // Toggle next step
+    $container.toggle();
+    $target.toggle();
+
+    // Toggle cancel
+    $cancel.on('click', function() {
+      if ( $container.is(':visible') == false ){
+        $container.toggle();
+        $target.toggle();
+      }
     })
   });
 });
