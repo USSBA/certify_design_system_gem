@@ -8,7 +8,7 @@ $(document).ready(function(){
   // Function for handling doc upload
   $doc_upload_toggle.on('click', function() {
 
-    // Determine which task panel we clicked on
+    // Determine which doc upload we clicked on
     elem = $(this).attr("aria-controls")
     var $toggle = $('button[aria-controls=' + elem + ']');
     var $cancel = $('button[aria-controls=' + elem + '-cancel]');
