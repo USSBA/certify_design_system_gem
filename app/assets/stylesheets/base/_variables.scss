@@ -166,6 +166,15 @@ $color-muted: $color-gray-medium !default;
 $color-base-inverse: $color-white !default;
 $color-muted-inverse: #bac5cf !default;
 
+// SBA brand colors
+$color-sba-blue: #002e6d;
+$color-sba-red: #cc0000;
+$color-sba-gray: #969696;
+$color-sba-blue--secondary: #007dbc;
+$color-sba-gray--dark: #1b1e29;
+$color-sba-green: #197e4e;
+$color-sba-yellow: #f1c400;
+
 // Focus
 // USWDS has a default focus color, but we want one that can be applied to
 // fields that are displayed on top of an inverted background
