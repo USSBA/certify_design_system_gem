@@ -1,0 +1,126 @@
+/*
+Alert
+
+Messages includes all components and sub-components
+related to the Certify messaging feature.
+
+*/
+
+.sba-c-thread-header {
+  @include display(flex);
+  @include flex-direction(column);
+  @include align-items(center);
+
+  @include media($width-md) {
+    @include flex-direction(row);
+  }
+
+}
+
+.sba-c-thread__icon {
+  @include flex-shrink(0);
+  width: $multiple * 9;
+
+  svg,
+  img {
+    fill: $color-gray-light;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.sba-c-thread-header__subject {
+  font-size: 3rem;
+  font-weight: normal;
+  margin: 0;
+  padding-right: $multiple * 3;
+}
+
+.sba-c-thread-header__actions {
+  color: $color-gray-medium;
+  margin-top: $multiple * 2;
+
+  @include media($width-md) {
+    margin-left: auto;
+    margin-top: 0;
+  }
+}
+
+.sba-c-thread {
+  list-style: none;
+  max-width: none;
+  padding: 0;
+}
+
+.sba-c-thread__item {
+  border-top: 1px solid $color-gray-light;
+  margin-bottom: $multiple * 9;
+  padding-top: $multiple * 3;
+}
+
+.sba-c-message__header {
+  @include align-items(center);
+  @include display(flex);
+  @include flex-wrap(wrap);
+
+  @include media($width-md) {
+    @include flex-wrap(none);
+  }
+}
+
+.sba-c-message__avatar {
+  @include flex-shrink(0);
+  width: $multiple * 9;
+}
+
+.sba-c-message__sender {
+  margin: 0;
+}
+
+.sba-c-message__recipient {
+  color: $color-gray-medium;
+}
+
+.sba-c-message__timestamp {
+  color: $color-gray-medium;
+  font-size: 1.5rem;
+  margin-left: auto;
+  width: 100%;
+
+  @include media($width-md) {
+    width: auto;
+  }
+}
+
+.sba-c-avatar {
+  fill: $color-gray-light;
+  width: 4.4rem;
+
+  text {
+    fill: white;
+    font-size: 5rem;
+  }
+}
+
+.sba-c-avatar--sba-user {
+  fill: $color-sba-blue;
+}
+
+.sba-c-message__body {
+
+  @include media($width-md) {
+    margin-left: $multiple * 9;
+  }
+
+}
+
+.sba-c-message__read-status {
+  @include display(flex);
+  color: $color-gray-medium;
+  font-size: 1.5rem;
+
+  svg {
+    fill: $color-gray-medium;
+    width: 1.6rem;
+  }
+}
