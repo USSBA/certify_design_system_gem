@@ -54,3 +54,12 @@
 .sba-c-facet-pills__reset:focus {
   text-decoration: underline;
 }
+
+// USWDS Standards overrides
+.sba-c-facet-set .usa-accordion-button {
+  background-position: right center;
+}
+
+.sba-c-facet-set .usa-accordion-content {
+  overflow: visible;
+}
