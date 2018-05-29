@@ -43,16 +43,18 @@
 }
 
 .sba-c-doc-upload__uploader {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  @include display(flex);
+  @include justify-content(center);
+  @include flex-direction(column);
+  @include align-items(center);
   background: $color-white;
   min-height: 12rem;
   text-align: center;
   border: 1.5px dashed $color-gray;
+  position: relative
 }
 
-.sba-c-doc-upload__uploader--input {
+.sba-c-doc-upload__uploader--label {
   display: inline-block;
   cursor: pointer;
   color: $color-primary;
@@ -60,6 +62,39 @@
   border: none;
   margin: 0;
   padding: 0;
+}
+
+.sba-c-doc-upload__uploader--input
+ {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  color: transparent;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  text-indent: -1000em;
+  max-width: none;
+  z-index: -1;
+}
+
+.sba-c-doc-upload__uploader--input::-ms-browse {
+  display: none;
+}
+
+.sba-c-doc-upload__uploader--input::-ms-value {
+  display: none;
+}
+
+.sba-c-doc-upload__uploader:focus-within {
+  box-shadow: 0 0 3px #3e94cf, 0 0 7px #3e94cf;
+  outline: 2px dotted #aeb0b5;
+  outline-offset: 3px;
+}
+
+.sba-c-doc-upload__uploader--input::-moz-focus-inner {
+  border: 0;
 }
 
 .sba-c-doc-upload--completed {
@@ -76,9 +111,6 @@
 .sba-c-doc-upload.sba-c-doc-upload--completed.is-open {
   background-color: $color-green-lightest;
 }
-
-
-
 
 .sba-c-doc-upload--custom {
   background-color: $color-background-primary-muted;
