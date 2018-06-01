@@ -18,6 +18,8 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(/^(assets|_layouts|_includes|_sass|LICENSE|README)/i) }
 
   spec.required_ruby_version = '>= 2.3.3'
+  
+  spec.executables   = ["cds-build"]  
 
   spec.add_runtime_dependency 'bourbon', '~> 4.3', '<= 5'
   spec.add_runtime_dependency 'sass', '~> 3.5'
