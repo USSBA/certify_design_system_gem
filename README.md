@@ -1,6 +1,7 @@
 # Certify Design System Gem
 Certify Design System Gem
 This gem supplies the Certify Design System Assets to either Jekyll or Rails applications.
+More info on Design System can be found at the [Design System Documentation Site](https://ussba.github.io/certify-design-system-documentation/components/questionnaire.html).
 
 ### Table of Contents
 
@@ -39,8 +40,8 @@ $ bundle
 ```
 ### Requirements
 
-This gem requires [Bourbon](https://github.com/thoughtbot/bourbon), [JQuery](https://jquery.com/) and [Sass](https://github.com/sass/sass).   
-**note: The gem has hard dependencies on the bourbon and sass gems but __not__ the JQuery gem, as JQuery can be required through CDN instead.
+This gem requires [Bourbon](https://github.com/thoughtbot/bourbon), [JQuery](https://jquery.com/) and [Sass](https://github.com/sass/sass). Some components may require [JQueryUI](https://jqueryui.com) as well.   
+**note: The gem has hard dependencies on the bourbon and sass gems but __not__ the JQuery gem, as JQuery can be required through CDN ([Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)) instead. The same is the case with JQueryUI, which can be added manualy or though CDN. 
 
 For tests Jekyll, Capybara and Rails are dependencies. Test-only dependencies are listed on the Gemfile but absent from the `gemspec` since using it in rails doesn't require Jekyll be loaded and vice-versa. 
 
