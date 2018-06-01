@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 2.3.3'
   
-  spec.executables   = ["cds-build"]  
+  spec.executables   = ["cds-gh-pages"]  
 
   spec.add_runtime_dependency 'bourbon', '~> 4.3', '<= 5'
   spec.add_runtime_dependency 'sass', '~> 3.5'
