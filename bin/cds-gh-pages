@@ -2,9 +2,11 @@
 # frozen_string_literal: true
 
 # rubocop:disable Style/MixinUsage
+# rubocop:disable  Lint/HandleExceptions
 
 require 'bundler/setup'
 require 'fileutils'
+require 'english'
 
 ##### ======= Color Strings =======
 module ColorString
@@ -33,12 +35,13 @@ puts cyan('Builds and pushes GitHub-pages site')
 
 # Verifies Git is installed.
 begin
-  `git --version` 
+  `git --version`
 rescue Errno::ENOENT
-end
-if $?.exitstatus != 0
-  puts red('Git not installed.')
-  exit 1
+ensure
+  if $CHILD_STATUS.exitstatus != 0
+    puts red('Git not installed.')
+    exit 1
+  end
 end
 
 # Captures Git Repository
@@ -85,3 +88,4 @@ end
 puts green('Pushed _site to gh_pages branch of' + git_repo_path)
 
 # rubocop:enable Style/MixinUsage
+# rubocop:enable  Lint/HandleExceptions
