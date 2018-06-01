@@ -2,7 +2,6 @@
 # frozen_string_literal: true
 
 # rubocop:disable Style/MixinUsage
-# rubocop:disable  Lint/HandleExceptions
 
 require 'bundler/setup'
 require 'fileutils'
@@ -36,7 +35,6 @@ puts cyan('Builds and pushes GitHub-pages site')
 # Verifies Git is installed.
 begin
   `git --version`
-rescue Errno::ENOENT
 ensure
   if $CHILD_STATUS.exitstatus != 0
     puts red('Git not installed.')
@@ -88,4 +86,3 @@ end
 puts green('Pushed _site to gh_pages branch of' + git_repo_path)
 
 # rubocop:enable Style/MixinUsage
-# rubocop:enable  Lint/HandleExceptions
