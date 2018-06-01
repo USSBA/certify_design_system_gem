@@ -32,9 +32,11 @@ puts cyan('Builds and pushes GitHub-pages site')
 ## Guards:
 
 # Verifies Git is installed.
-verify_git = Gem.win_platform? ? system('git', '--version') : system('type git >/dev/null 2>&1 || exit 1')
-
-unless verify_git
+begin
+  `git --version` 
+rescue Errno::ENOENT
+end
+if $?.exitstatus != 0
   puts red('Git not installed.')
   exit 1
 end
@@ -44,7 +46,7 @@ git_repo_path = `git config --get remote.origin.url`.chomp
 
 # Checks if it is in a git repository.
 if git_repo_path.empty?
-  puts red('No git Repository initiallized')
+  puts red('No git Repository initiallized.')
   exit 1
 end
 
