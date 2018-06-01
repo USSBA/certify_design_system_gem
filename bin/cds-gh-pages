@@ -32,7 +32,14 @@ puts cyan('Builds and pushes GitHub-pages site')
 ## Guards:
 
 # Verifies Git is installed.
-unless system('type git >/dev/null 2>&1 || exit 1')
+verify_git_cmd =
+  if Gem.win_platform?
+    ['git', '--version']
+  else
+    ['type git >/dev/null 2>&1 || exit 1']
+  end
+
+unless system(*verify_git_cmd)
   puts red('Git not installed.')
   exit 1
 end
