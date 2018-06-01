@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# rubocop:disable Style/MixinUsage
+
 require 'bundler/setup'
 require 'fileutils'
 
@@ -77,3 +79,5 @@ else
 end
 
 puts green('Pushed _site to gh_pages branch of' + git_repo_path)
+
+# rubocop:enable Style/MixinUsage
