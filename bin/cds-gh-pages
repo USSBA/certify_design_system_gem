@@ -1,0 +1,88 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# rubocop:disable Style/MixinUsage
+
+require 'bundler/setup'
+require 'fileutils'
+require 'english'
+
+##### ======= Color Strings =======
+module ColorString
+  def red(string)
+    STDOUT.tty? ? "\033[31m#{string}\033[0m\n" : string # 31
+  end
+
+  def green(string)
+    STDOUT.tty? ? "\033[32m#{string}\033[0m\n" : string # 32
+  end
+
+  def yellow(string)
+    STDOUT.tty? ? "\033[33m#{string}\033[0m\n" : string # 33
+  end
+
+  def cyan(string)
+    STDOUT.tty? ? "\033[36m#{string}\033[0m\n" : string # 36
+  end
+end
+
+include ColorString
+
+puts cyan('Builds and pushes GitHub-pages site')
+
+## Guards:
+
+# Verifies Git is installed.
+begin
+  `git --version`
+ensure
+  if $CHILD_STATUS.exitstatus != 0
+    puts red('Git not installed.')
+    exit 1
+  end
+end
+
+# Captures Git Repository
+git_repo_path = `git config --get remote.origin.url`.chomp
+
+# Checks if it is in a git repository.
+if git_repo_path.empty?
+  puts red('No git Repository initiallized.')
+  exit 1
+end
+
+# Verifies if '--force' argument was sent.
+if ARGF.argv.include?('--force')
+  puts yellow('Using repo: ' + git_repo_path)
+else
+  unless git_repo_path == 'git@github.com:USSBA/certify-design-system-documentation.git'
+    puts red('Wrong Repository:')
+    puts yellow('Use "--force" to use with: ' + git_repo_path)
+    exit 1
+  end
+end
+
+## End of Guards
+
+FileUtils.remove_dir '_site' if Dir.exist? '_site'
+
+if system('bundle', 'exec', 'jekyll', 'build', '--quiet', '--trace')
+  FileUtils.cd('_site') do
+    unless system('git', 'init') &&
+           system('git', 'remote', 'add', 'origin', git_repo_path) &&
+           system('git', 'checkout', '-b', 'gh-pages') &&
+           system('git', 'add', '-A') &&
+           system('git', 'commit', '--quiet', '-m', '"update site"') &&
+           system('git', 'push', '-f', 'origin', 'gh-pages')
+      raise 'Unable to push to GitHub'
+    end
+  end
+  FileUtils.remove_dir '_site' if Dir.exist? '_site'
+else
+  puts red('Something went Wrong unable to Jekyll Build')
+  exit 1
+end
+
+puts green('Pushed _site to gh_pages branch of' + git_repo_path)
+
+# rubocop:enable Style/MixinUsage
