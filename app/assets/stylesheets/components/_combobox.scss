@@ -1,0 +1,44 @@
+.sba-c-combobox {
+  position: relative;
+}
+
+.sba-c-autosuggest {
+  background: #fff;
+  border: 1px solid $color-gray;
+  list-style: none;
+  max-height: 23rem;
+  max-width: 46rem;
+  padding: 0;
+  overflow-y: scroll;
+
+  > li {
+    padding: $multiple;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  > li:hover {
+    background-color:  $color-primary-alt-lightest;
+  }
+}
+
+.sba-c-combobox__wrapper {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(flex-start);
+}
+
+.sba-c-combobox__toggle {
+  background-color: #ffffff;
+  background-image: url(arrow-down.png);
+  background-image: url(arrow-down.svg);
+  background-position: right 1.3rem center;
+  background-repeat: no-repeat;
+  background-size: 1.3rem;
+  border: 1px solid $color-gray;
+  border-left: 0;
+  display: block;
+  text-indent: -999em;
+  height: 4.4rem;
+  width: 4.4rem;
+}

@@ -26,6 +26,8 @@ end
 
 # Dummy Rails app dependencies
 group :test do
+  gem 'rake'
+  gem 'puma'
   gem 'actionpack', '>= 4.1.5'
   gem 'activesupport', '>= 4.1.5'
   gem 'autoprefixer-rails'

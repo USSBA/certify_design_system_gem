@@ -40,3 +40,26 @@
   font-size: 1.3rem;
   width: auto;
 }
+
+.sba-c-facet-pills__reset,
+.sba-c-facet-pills__reset:hover {
+  background: transparent;
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: $color-primary;
+  padding: 8px;
+}
+
+.sba-c-facet-pills__reset:hover,
+.sba-c-facet-pills__reset:focus {
+  text-decoration: underline;
+}
+
+// USWDS Standards overrides
+.sba-c-facet-set .usa-accordion-button {
+  background-position: right center;
+}
+
+.sba-c-facet-set .usa-accordion-content {
+  overflow: visible;
+}
