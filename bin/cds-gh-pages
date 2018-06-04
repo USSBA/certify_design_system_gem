@@ -55,7 +55,8 @@ end
 if ARGF.argv.include?('--force')
   puts yellow('Using repo: ' + git_repo_path)
 else
-  unless git_repo_path == 'git@github.com:USSBA/certify-design-system-documentation.git'
+  unless ['git@github.com:USSBA/certify-design-system-documentation.git',
+          'git@github.com:USSBA/certify-prototype.git'].include? git_repo_path
     puts red('Wrong Repository:')
     puts yellow('Use "--force" to use with: ' + git_repo_path)
     exit 1
