@@ -27,3 +27,36 @@
 .sba-c-timeline .sba-c-timeline__list__item--current:first-child {
   padding: 1rem 3rem;
 }
+
+// Overrides need for combo box to override properties from the jQuery UI css
+.sba-c-combobox__toggle {
+  border-radius: 0;
+  margin: 0;
+}
+
+.sba-c-combobox__input {
+  border: 1px solid $color-gray;
+  border-radius: 0;
+  background: #fff;
+  font-weight: normal;
+  color: $color-base;
+  font-family: $font-sans;
+}
+
+.sba-c-autosuggest {
+  font-family: $font-sans;
+
+  .ui-menu-item,
+  .ui-menu-item:first-child {
+    padding: $multiple;
+    margin: 0;
+
+    &:hover,
+    &.ui-state-focus {
+      background-color:  $color-primary-alt-lightest;
+      border: none;
+      font-weight: normal;
+      color: $color-base;
+    }
+  }
+}
