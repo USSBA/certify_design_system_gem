@@ -1,4 +1,6 @@
 $(function() {
+
+  if (typeof jQuery.ui !== 'undefined'){
         $.widget( "custom.combobox", {
           _create: function() {
             this.wrapper = $( "<span>" )
@@ -138,4 +140,5 @@ $(function() {
                 });
             }
         });
-      });
+      }
+  });
