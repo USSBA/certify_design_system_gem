@@ -102,3 +102,95 @@
   color: $color-green;
   font-weight: bold;
 }
+
+// Recommendation lists
+.sba-c-recommendation-list-header {
+  color: $color-gray;
+  font-size: 1.8rem;
+  margin: 0 0 1.6rem 0;
+}
+
+.sba-c-recommendation-list {
+  border-left: 3px solid $color-gray-lighter;
+  list-style: none;
+  padding: 0;
+  margin-bottom: $multiple * 4;
+}
+
+.sba-c-recommendation-list__item {
+  @include display(flex);
+  @include align-items(center);
+  background-color: $color-gray-lightest;
+  border-radius: 4px;
+  padding: .75rem $multiple * 2 !important; //important because of awful `.public li:first-child {padding-left: 0;}` selector
+  margin: 0 0 2px $multiple * 2;
+}
+
+.sba-c-recommendation-list__item--positive {
+  background-color: $color-green-lightest;
+
+  .sba-c-icon {
+    fill: $color-green;
+  }
+}
+
+.sba-c-recommendation-list__item--final-positive {
+  background-color: $color-green;
+  color: white;
+
+  .sba-c-icon {
+    fill: white;
+  }
+}
+
+.sba-c-recommendation-list__item--negative {
+  background-color: $color-secondary-lightest;
+
+  .sba-c-icon {
+    fill: $color-secondary-darkest;
+  }
+}
+
+.sba-c-recommendation-list__item--final-negative {
+  background-color: $color-secondary-darkest;
+  color: white;
+
+  .sba-c-icon {
+    fill: white;
+  }
+}
+
+.sba-c-recommendation-list__item--warn {
+  background-color: $color-gold-lightest;
+
+  .sba-c-icon {
+    fill: $color-base;
+  }
+}
+
+.sba-c-recommendation-list__item--final-warn {
+  background-color: $color-gold;
+  color: $color-base;
+
+  .sba-c-icon {
+    fill: $color-base;
+  }
+}
+
+
+.sba-c-recommendation-list__icon {
+  margin: 2px $multiple * 2 0 0;
+}
+
+.sba-c-recommendation-list__content {
+  line-height: 1.4;
+}
+
+.sba-c-recommendation-list__recommendation {
+  font-size: 1.8rem;
+  font-weight: $font-bold;
+}
+
+.sba-c-recommendation-list__data {
+  font-size: 1.4rem;
+}
