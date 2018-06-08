@@ -48,6 +48,13 @@
   padding: $multiple * 3;
   width: auto;
 
+  > ul,
+  > ol,
+  > p {
+    max-width: 750px;
+    max-width: 66ch;
+  }
+
   > *:last-child {
     margin-bottom: 0;
   }

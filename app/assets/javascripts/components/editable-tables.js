@@ -2,27 +2,38 @@ $(document).ready(function() {
   var $editable_table = $('.sba-c-table--editable'),
       $add_button = $editable_table.next('[id$="_add_item"]');
       var previous_values = [];
+
+      if (typeof $editable_table.attr('id') !== 'undefined' &&      $editable_table.attr('id') !== null) {
+        var textarea_id = $editable_table.attr('id').replace('_table', '').replace('_', '[').replace('_', '][') + ']';
+        var current_table_data = $("textarea[id='" + textarea_id + "']").text();
+        if(current_table_data=="") {
+          var row_data = {}
+        } else {
+          var row_data = JSON.parse(current_table_data);
+        }
+      }
+
       var itemID;
 
       var getItemID = function(e){
         if (typeof e.attr('id') != "undefined") {
           itemID = "#" + e.attr('id').replace('_edit','').replace('_delete','').replace('_save','').replace('_cancel','');
         }
-      }
+      };
 
       var closeTaskPanels = function(){
         // Clase the task panels
         $('.sba-c-task-panel__toggle').attr("aria-expanded", "false");
         $('.sba-c-task-panel__content').removeClass('visible');
         $('.sba-c-task-panel__toggle').attr("disabled", "");
-      }
+      };
 
 
       var numberWithCommas = function(number) {
           var parts = number.toString().split(".");
           parts[0] = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
           return parts.join(".");
-      }
+      };
 
       var calculateTableSummaries = function(table) {
         var table_cols = table.find('thead tr th').length;
@@ -100,6 +111,29 @@ $(document).ready(function() {
         if ($(table).find('tbody tr').length <= 2) {
           $(table).find('tbody tr[id$="0_data"]').removeAttr("hidden");
           $(table).find('tfoot').remove();
+
+          var textarea_id = $editable_table.attr('id').replace('_table','').replace('_','[').replace('_','][')+']';
+          data = JSON.parse($("textarea[id='"+textarea_id+"']").val());
+          delete data[itemID.replace('#','')];
+
+          new_row_data = {};
+          var row = 1;
+          $.each(data, function(key, value) {
+            var split_array = key.split('_');
+            var old_row_num = split_array[split_array.length - 1];
+            var new_column_data = {};
+
+            $.each(value, function(key2, value) {
+              new_inner_key = key2.replace(old_row_num,'tr'+row);
+              new_column_data[new_inner_key] = value;
+
+              new_outer_key = key.replace(old_row_num,'tr'+row);
+              new_row_data[new_outer_key] = new_column_data;
+            });
+            row+=1
+          });
+
+          $("textarea[id='"+textarea_id+"']").text(JSON.stringify(new_row_data));
         }
         return false;
       });
@@ -121,6 +155,10 @@ $(document).ready(function() {
            $(table).attr('aria-live', 'polite');
 
            new_values = [];
+
+           // create dictionary to hold saved data
+           var column_data = {};
+
            $(itemID + "_fields").find('input').each(function(){
              input_id = "#" + $(this).attr('id');
 
@@ -133,8 +171,14 @@ $(document).ready(function() {
              else {
                initial_val = $(this).val();
              }
+             column_data[input_id.replace('#','')] = initial_val;
              new_values.push([input_id, initial_val]);
            });
+
+           row_data[itemID.replace('#','')] = column_data;
+
+           // add row data to store
+           $("textarea[id='"+textarea_id+"']").text(JSON.stringify(row_data));
 
 
            var summated_cols = $(table).find('.js-sum').length;
