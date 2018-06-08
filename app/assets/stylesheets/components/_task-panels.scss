@@ -135,9 +135,14 @@
 }
 
 
-.sba-c-task-panel__toggle--small {
+.sba-c-task-panel .sba-c-task-panel__toggle--small {
   height: 30px;
   width: 30px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .sba-c-task-panel__toggle--small + .sba-c-task-panel__content {
