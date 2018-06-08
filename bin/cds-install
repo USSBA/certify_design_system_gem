@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'fileutils'
+
+if ARGF.argv.include?('-h') || ARGF.argv.include?('--help')
+  puts 'Installs Certify Design System Assets to local directory'
+  exit 0
+end
+
+gem_path = File.expand_path((__dir__ + '/..')) + '/app/assets'
+if Dir.exist? gem_path
+  local_path = 'certify-design-system'
+  if Dir.exist?(local_path) || Dir.mkdir(local_path)
+    puts 'Installing assets into the ' + local_path + ' directory.'
+    FileUtils.cp_r(gem_path, local_path)
+  end
+else
+  puts 'Unable to find Gem Directory'
+  exit 1
+end
