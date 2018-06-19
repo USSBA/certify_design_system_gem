@@ -90,6 +90,7 @@
 .sba-c-calendar-picker select.ui-datepicker-year {
   min-width: 86px;
   font-size: 14px;
+  font-weight: normal;
 }
 
 .sba-c-calendar-picker .ui-datepicker-prev,
@@ -126,4 +127,20 @@
 
 .sba-c-calendar-picker.ui-datepicker th {
   font-size: 14px;
+}
+
+.sba-c-calendar-picker .ui-icon-circle-triangle-e,
+.sba-c-calendar-picker .ui-icon-circle-triangle-w {
+  background-size: 16px 16px;
+  background-position: center center;
+}
+
+.sba-c-calendar-picker .ui-icon-circle-triangle-e {
+  background-image: url('arrow-right.png');
+  background-image: url('arrow-right.svg');
+}
+
+.sba-c-calendar-picker .ui-icon-circle-triangle-w {
+  background-image: url('arrow-left.png');
+  background-image: url('arrow-left.svg');
 }
