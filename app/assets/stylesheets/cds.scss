@@ -5,6 +5,9 @@ $output-bourbon-deprecation-warnings: false !default;
 
 @import "settings/all";
 
+// Vendor CSS, so we can overrides
+@import "vendor/jqueryui";
+
 // Let's start testing some of the new V2 components
 @import "base/variables";
 @import "base/fonts";
