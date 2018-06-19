@@ -54,9 +54,93 @@
     &:hover,
     &.ui-state-focus {
       background-color:  $color-primary-alt-lightest;
+      background-image: none;
       border: none;
       font-weight: normal;
       color: $color-base;
     }
   }
+}
+
+// Calendar picker
+.sba-c-calendar-picker .ui-datepicker-header {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(space-between);
+  background: $color-gray-lightest;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.sba-c-calendar-picker .ui-datepicker-header .ui-state-hover {
+  border: none;
+  background: none;
+}
+
+.sba-c-calendar-picker .ui-datepicker-title {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+.sba-c-calendar-picker .ui-datepicker-month {
+  font-size: 14px;
+}
+
+.sba-c-calendar-picker select.ui-datepicker-year {
+  min-width: 86px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.sba-c-calendar-picker .ui-datepicker-prev,
+.sba-c-calendar-picker .ui-datepicker-next {
+  cursor: pointer;
+  top: 50%;
+  margin-top: -.9em;
+}
+
+.sba-c-calendar-picker .ui-state-default {
+  background: none;
+  border: none;
+  color: $color-base;
+  font-size: 14px;
+  padding: 10px;
+  text-align: center;
+
+  &:hover {
+    background: $color-gray-lightest;
+    color: $color-primary-alt-darkest;
+    text-decoration: underline;
+  }
+}
+
+.sba-c-calendar-picker .ui-state-highlight {
+  background: $color-primary-alt-lightest;
+  border-color: $color-primary-alt-light;
+}
+
+.sba-c-calendar-picker.ui-datepicker td {
+  padding: 0;
+  border: 1px solid $color-gray-lighter;
+}
+
+.sba-c-calendar-picker.ui-datepicker th {
+  font-size: 14px;
+}
+
+.sba-c-calendar-picker .ui-icon-circle-triangle-e,
+.sba-c-calendar-picker .ui-icon-circle-triangle-w {
+  background-size: 16px 16px;
+  background-position: center center;
+}
+
+.sba-c-calendar-picker .ui-icon-circle-triangle-e {
+  background-image: url('arrow-right.png');
+  background-image: url('arrow-right.svg');
+}
+
+.sba-c-calendar-picker .ui-icon-circle-triangle-w {
+  background-image: url('arrow-left.png');
+  background-image: url('arrow-left.svg');
 }

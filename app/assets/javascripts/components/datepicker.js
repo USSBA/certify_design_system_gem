@@ -50,7 +50,7 @@ $(document).ready(function() {
       if (values[0]) values[0] = checkValue(values[0], 12);
       if (values[1]) values[1] = checkValue(values[1], 31);
       var output = values.map(function(v, i) {
-        return v.length == 2 && i < 2 ? v + ' / ' : v;
+        return v.length == 2 && i < 2 ? v + '/' : v;
       });
       this.value = output.join('').substr(0, 14);
     });
@@ -73,7 +73,7 @@ $(document).ready(function() {
           output = dates.map(function(v) {
             v = v.toString();
             return v.length == 1 ? '0' + v : v;
-          }).join(' / ');
+          }).join('/');
         };
       };
       this.value = output;
