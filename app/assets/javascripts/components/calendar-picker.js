@@ -11,6 +11,9 @@ $(document).ready(function(){
 
   if ($calendar_picker.length > 0) {
     $( ".js-calendar" ).datepicker({
+      beforeShow: function( input, inst){
+        $(inst.dpDiv).addClass('sba-c-calendar-picker');
+      },
       dateFormat: 'mm/dd/yy',
       onSelect: function(date) {
         $(this).trigger("blur")
