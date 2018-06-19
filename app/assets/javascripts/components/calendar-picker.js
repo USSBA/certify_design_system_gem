@@ -7,10 +7,10 @@
  */
 
 $(document).ready(function(){
-  var $calendar_picker = $( ".js-calendar" );
+  var $calendar_picker = $( ".js-calendar-picker" );
 
   if ($calendar_picker.length > 0) {
-    $( ".js-calendar" ).datepicker({
+    $calendar_picker.datepicker({
       beforeShow: function( input, inst){
         $(inst.dpDiv).addClass('sba-c-calendar-picker');
       },
