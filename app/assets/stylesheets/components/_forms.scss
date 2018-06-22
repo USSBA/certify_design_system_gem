@@ -9,6 +9,10 @@ input[type=number] {
 -moz-appearance: textfield;
 }
 
+select {
+  padding-right: 3.5rem;
+}
+
 // Checkboxes
 .sba-c-checkbox + .sba-c-label {
   padding-left: 3rem;
