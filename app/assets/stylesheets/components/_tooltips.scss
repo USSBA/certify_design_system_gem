@@ -1,0 +1,47 @@
+/* Tooltips */
+
+.sba-c-tooltip__wrapper {
+  position: relative;
+}
+
+.sba-c-tooltip {
+  @include transform(translate(-50%, .25rem));
+  @include transition(all .08s ease-in-out);
+  background: $color-gray;
+  border-radius: 4px;
+  color: #fff;
+  display: none;
+  font-size: 1.4rem;
+  padding: $multiple;
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  opacity: 0;
+  width: auto;
+  white-space: pre;
+  z-index: 100000;
+
+  &:after {
+    @include transform(translateX(-50%));
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $color-gray;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+  }
+}
+
+.sba-c-tooltip[aria-hidden="false"] {
+  display: block;
+}
+
+.sba-c-tooltip.transition {
+  @include transform(translate(-50%, 0));
+  opacity: 1;
+}
