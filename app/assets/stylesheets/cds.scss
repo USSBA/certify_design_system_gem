@@ -46,6 +46,7 @@ $output-bourbon-deprecation-warnings: false !default;
 @import "components/tables";
 @import "components/taskbar";
 @import "components/task-panels";
+@import "components/tooltips";
 
 // Shame
 @import "shame/shame";
