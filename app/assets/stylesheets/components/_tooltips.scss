@@ -1,6 +1,7 @@
 /* Tooltips */
 
-.sba-c-tooltip__wrapper {
+.sba-c-tooltip-wrapper {
+  display: inline-block;
   position: relative;
 }
 
@@ -14,7 +15,8 @@
   font-size: 1.4rem;
   padding: $multiple;
   position: absolute;
-  top: -36px;
+  pointer-events: none;
+  top: -42px;
   left: 50%;
   opacity: 0;
   width: auto;
@@ -34,6 +36,16 @@
     position: absolute;
     bottom: -5px;
     left: 50%;
+  }
+}
+
+.sba-c-tooltip-toggle {
+  display: block;
+  cursor: pointer;
+
+  > svg {
+    display: block;
+    pointer-events: none;
   }
 }
 

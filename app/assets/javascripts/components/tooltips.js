@@ -11,9 +11,13 @@ $(function() {
     $element_with_tooltip.each(function(){
       var $tooltip_id = "tooltip" + (Math.floor(Math.random()*90000) + 10000),
           tooltip_text = $(this).attr(tooltip);
-      $(this).attr("aria-describedby", $tooltip_id);
-      $(this).wrap('<span class="sba-c-tooltip__wrapper"></span>');
-      $(this).after('<span class="sba-c-tooltip" id="' + $tooltip_id + '" aria-hidden="true" aria-role="tooltip">' + tooltip_text + '</span>');
+      $(this).attr({
+        "aria-describedby": $tooltip_id,
+        tabindex: "0"
+      })
+        .wrap('<span class="sba-c-tooltip-wrapper"></span>')
+        .after('<span class="sba-c-tooltip" id="' + $tooltip_id + '" aria-hidden="true" aria-role="tooltip">' + tooltip_text + '</span>')
+        .addClass('sba-c-tooltip-toggle');
     });
   };
 
