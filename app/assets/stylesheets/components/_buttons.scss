@@ -59,6 +59,15 @@ Style guide: components.button
   padding: $spacer-half $spacer-1;
 }
 
+.sba-c-button--icon-only {
+  font-size: 2rem;
+  padding: $spacer-1;
+}
+
+.sba-c-button--icon-only--sm {
+  font-size: 1.4rem;
+}
+
 .sba-c-button--inverse,
 .sba-c-button--inverse:visited {
   background-color: transparent;
