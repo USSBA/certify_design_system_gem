@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+  // Toggle cards to show/hide details
   var $doc_toggle = $('.sba-c-card__toggle')
 
   $doc_toggle.on('click', function() {
@@ -18,4 +20,5 @@ $(document).ready(function(){
       toggle.children('svg').css({'transform': 'rotate(0deg)'})
     }
   });
+
 });
