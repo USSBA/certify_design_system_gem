@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var $doc_toggle = $('.sba-c-doc__toggle')
+  var $doc_toggle = $('.sba-c-card__toggle')
 
   $doc_toggle.on('click', function() {
 
