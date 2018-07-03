@@ -51,6 +51,12 @@ $card_padding_lg: $multiple * 6;
   }
 }
 
+.sba-c-card__toggle.is-activated {
+  svg {
+    @include transform(rotate(180deg));
+  }
+}
+
 .sba-c-card__body {
   padding: $card_padding_sm;
   width: 100%;
