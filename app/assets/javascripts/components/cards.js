@@ -1,5 +1,8 @@
 $(document).ready(function(){
-  var $doc_toggle = $('.sba-c-doc__toggle')
+
+  // Toggle cards to show/hide details
+  var $doc_toggle = $('.sba-c-card__toggle'),
+      active_class = 'is-activated';
 
   $doc_toggle.on('click', function() {
 
@@ -12,10 +15,11 @@ $(document).ready(function(){
 
     if ( toggle.attr('aria-expanded') === 'false' ) {
       toggle.attr("aria-expanded","true");
-      toggle.children('svg').css({'transform': 'rotate(180deg)'})
+      toggle.addClass(active_class);
     } else {
       toggle.attr("aria-expanded","false");
-      toggle.children('svg').css({'transform': 'rotate(0deg)'})
+      toggle.removeClass(active_class);
     }
   });
+
 });
