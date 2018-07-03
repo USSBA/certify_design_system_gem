@@ -15,10 +15,10 @@ $(document).ready(function(){
 
     if ( toggle.attr('aria-expanded') === 'false' ) {
       toggle.attr("aria-expanded","true");
-      $(this).addClass(active_class);
+      toggle.addClass(active_class);
     } else {
       toggle.attr("aria-expanded","false");
-      $(this).removeClass(active_class);
+      toggle.removeClass(active_class);
     }
   });
 
