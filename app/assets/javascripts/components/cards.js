@@ -2,7 +2,8 @@ $(document).ready(function(){
 
   // Toggle cards to show/hide details
   var $doc_toggle = $('.sba-c-card__toggle'),
-      active_class = 'is-activated';
+      active_class = 'is-activated',
+      hidden_attribute = 'hidden';
 
   $doc_toggle.on('click', function() {
 
@@ -11,14 +12,18 @@ $(document).ready(function(){
     elem = $(this).attr("aria-controls")
 
     var $target = $("#" + elem);
-    $target.toggle();
+
 
     if ( toggle.attr('aria-expanded') === 'false' ) {
-      toggle.attr("aria-expanded","true");
-      toggle.addClass(active_class);
+      toggle
+        .attr("aria-expanded","true")
+          .addClass(active_class);
+      $target.removeAttr(hidden_attribute);
     } else {
-      toggle.attr("aria-expanded","false");
-      toggle.removeClass(active_class);
+      toggle
+        .attr("aria-expanded","false")
+          .removeClass(active_class);
+      $target.attr(hidden_attribute, "");
     }
   });
 

@@ -45,9 +45,13 @@ $card_padding_lg: $multiple * 6;
   }
 }
 
+.sba-c-card__toggle svg {
+  @include transform(translateY(.5rem));
+}
+
 .sba-c-card__toggle.is-activated {
   svg {
-    @include transform(rotate(180deg));
+    @include transform(rotate(180deg) translateY(-.5rem));
   }
 }
 
