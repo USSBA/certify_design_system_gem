@@ -195,3 +195,17 @@
 .sba-c-recommendation-list__data {
   font-size: 1.4rem;
 }
+
+.sba-c-recommendation-list--horizontal {
+  border: none;
+  max-width: none;
+  margin-bottom: $multiple;
+
+  @include media($width-lg) {
+    @include display(flex);
+  }
+}
+
+.sba-c-recommendation-list--horizontal .sba-c-recommendation-list__item {
+  margin: 0 $multiple 2px 0;
+}
