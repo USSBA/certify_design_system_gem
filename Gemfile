@@ -14,7 +14,7 @@ gem 'capybara', '>= 2.6.0', group: :test
 gem 'minitest-reporters', '~> 1.0.5', group: :test
 # gem 'poltergeist', group: :test
 gem 'chromedriver-helper', group: :test
-gem 'selenium-webdriver', group: :test 
+gem 'selenium-webdriver', '~> 3.12.0', group: :test 
 gem 'capybara-selenium', group: :test 
 gem 'chunky_png', group: :test
 
