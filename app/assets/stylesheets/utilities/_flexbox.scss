@@ -230,6 +230,10 @@ $_flex-direction-values: (column: column, row: row, column-reverse: column-rever
   .sba-u-flex-direction--#{$name} {
     // Example: flex-wrap: flex-start
     @include flex-direction($value !important);
+
+    > [class*=sba-l-col] {
+      @include flex-basis(auto !important);
+    }
   }
 }
 
@@ -243,6 +247,10 @@ $_flex-direction-values: (column: column, row: row, column-reverse: column-rever
       .sba-u-#{$breakpoint}-flex-direction--#{$name} {
         // Example: flex-wrap: flex-start
         @include flex-direction($value !important);
+
+        > [class*=sba-l-col] {
+          @include flex-basis(auto !important);
+        }
       }
     }
   }

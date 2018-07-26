@@ -47,7 +47,7 @@
 .sba-l-row {
   @include display(flex);
   @include flex-wrap(wrap);
-  width: 100%;
+  min-width: 100%;
 }
 
 .sba-l-row--reverse {
