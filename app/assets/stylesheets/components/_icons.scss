@@ -1,4 +1,5 @@
 .sba-c-icon {
+  @include flex-shrink(0);
   fill: $color-base;
   height: 2rem;
   width: 2rem;
