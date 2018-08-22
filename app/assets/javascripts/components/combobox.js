@@ -21,7 +21,10 @@ $(function() {
               .val( value )
               .attr({
                 title: "",
-                "aria-label": "Start typing to filter"
+                "aria-label": "Start typing to filter",
+                "id": "combobox_" + this.element[0].id,
+                "name": "combobox_" + this.element[0].name,
+                "placeholder": "Start typing…"
               })
               .addClass( "sba-c-combobox__input ui-widget ui-widget-content ui-state-default ui-corner-left sba-c-input" )
               .autocomplete({

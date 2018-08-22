@@ -28,6 +28,12 @@
   @include justify-content(flex-start);
 }
 
+.ui-widget input.sba-c-combobox__input {
+  font-family: $font-sans;
+  font-size: 1.7rem;
+  max-width: 41.6rem;
+}
+
 .sba-c-combobox__toggle {
   background-color: #ffffff;
   background-image: url(arrow-down.png);
