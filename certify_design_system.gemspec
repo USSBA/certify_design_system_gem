@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/USSBA/certify_design_system_gem"
   spec.licenses      = ['MIT', 'OFL-1.1', 'CC-BY-4.0', 'CC0-1.0']
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(/^(app|LICENSE|README)/i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(/^(app|lib|LICENSE|README)/i) }
 
   spec.required_ruby_version = '>= 2.3.3'
   
