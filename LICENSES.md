@@ -14,6 +14,8 @@ The SVG Sprite Icons are from [Font Awesome (version 5)](https://fontawesome.com
 
 The [svg4everybody](https://github.com/jonathantneal/svg4everybody) is public domain under creative commons's public doman zero [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode). Here is a [human readable summary](https://creativecommons.org/publicdomain/zero/1.0/). 
 
+The [JQueryUI](https://github.com/jquery/jquery-ui) is licenced under creative commons's public domain zero [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode). 
+
 ### Licensed under the MIT License
 
 The Certify Design System gem's Ruby code is licensed under the [MIT](https://opensource.org/licenses/MIT). A copy of that license is distributed with this software. 

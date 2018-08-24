@@ -98,6 +98,17 @@ for images and fonts you may need to precompile:
 run asset precompile
 `$ bin/rails assets:precompile`
 
+#### Using SVGs in an Rails view
+
+To use the SVGs in a Rails view, the rails `image_path` helper can be used inside an ERB code block.
+
+```
+<svg aria-hidden="true" class="sba-c-icon sba-c-icon--gold">
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=<%= "#{image_path('svg-sprite/sprite.svg')}#archive" %> ></use>
+</svg>
+```
+
+
 ### Jekyll
 
 Add gem to your `Gemfile` under jekyll_plugins.  This gem requires `jekyll-assets` and it must be loaded before in the Gemfile. 
