@@ -58,13 +58,13 @@ $ bundle exec rake build
 
 #### Javascript
 
-add the `jquery-rails` gem to the Gemfile
+Add the `jquery-rails` gem to the Gemfile
 
 ```ruby
 gem 'jquery-rails'
 ```
 
-add the following to application.js on the Rails application (JQuery must be required above the gem)
+Add the following to application.js on the Rails application (JQuery must be required above the gem)
 
 ```javascript 
 //= require jquery
@@ -73,13 +73,13 @@ add the following to application.js on the Rails application (JQuery must be req
 
 #### Stylesheets
 
-add the `sass-rails` gem to the Gemfile
+Add the `sass-rails` gem to the Gemfile
 
 ```ruby
 gem 'sass-rails'
 ```
 
-add the following to `application.css.scss` on the Rails application
+Add the following to `application.css.scss` on the Rails application
 
 ```sass
 @import 'cds'; 
@@ -93,9 +93,9 @@ $output-bourbon-deprecation-warnings: false !default;
 
 #### Rails Asset Precompile
 
-for images and fonts you may need to precompile:
+For images and fonts you may need to precompile:
 
-run asset precompile
+Run asset precompile
 `$ bin/rails assets:precompile`
 
 #### Using SVGs in an Rails view
