@@ -40,7 +40,15 @@ $ bundle
 ```
 ### Build Gem
 
-Add info on building gem.
+To build the gem:
+```bash
+gem build certify_design_system.gemspec
+```
+
+To install the gem locally (replace `0.0.0` with actual build numbers):
+```bash
+gem install ./certify_design_system-0.0.0.gem
+```
 
 ### Requirements
 
