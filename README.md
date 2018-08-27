@@ -38,17 +38,6 @@ And then execute:
 ```
 $ bundle
 ```
-### Build Gem
-
-To build the gem:
-```bash
-gem build certify_design_system.gemspec
-```
-
-To install the gem locally (replace `0.0.0` with actual build numbers):
-```bash
-gem install ./certify_design_system-0.0.0.gem
-```
 
 ### Requirements
 
@@ -64,6 +53,12 @@ To build a gem run the rake build command:
 ```
 $ bundle exec rake build
 ```
+
+To install the gem locally (replace `0.0.0` with actual build numbers):
+```
+$ gem install ./certify_design_system-0.0.0.gem
+```
+
 
 ## Usage
 ### Rails
