@@ -38,6 +38,10 @@ And then execute:
 ```
 $ bundle
 ```
+### Build Gem
+
+Add info on building gem.
+
 ### Requirements
 
 This gem requires [Bourbon 4](https://github.com/thoughtbot/bourbon/tree/v4-stable) (see also [Bourbon 4 Docs](https://www.bourbon.io/docs/4/)), [JQuery](https://jquery.com/) and [Sass](https://github.com/sass/sass). Some components may require [JQueryUI](https://jqueryui.com) as well.   
@@ -102,7 +106,7 @@ Run asset precompile
 
 To use the SVGs in a Rails view, the rails `image_path` helper can be used inside an ERB code block.
 
-```
+```erb
 <svg aria-hidden="true" class="sba-c-icon sba-c-icon--gold">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=<%= "#{image_path('svg-sprite/sprite.svg')}#archive" %> ></use>
 </svg>
