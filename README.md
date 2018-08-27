@@ -56,7 +56,7 @@ $ bundle exec rake build
 
 To install the gem locally (replace `0.0.0` with actual build numbers):
 ```
-$ gem install ./certify_design_system-0.0.0.gem
+$ gem install ./pkg/certify_design_system-0.0.0.gem
 ```
 
 
