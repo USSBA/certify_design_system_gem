@@ -24,18 +24,18 @@ Add this line to your application's Gemfile:
 For Development use the unpacked gem:
 
 ```ruby
-$ gem 'certify_design_system', path: "#{path_to_upacked_gem_files}"
+gem 'certify_design_system', path: "#{path_to_upacked_gem_files}"
 ```
 
 Or use the GitHub Repository:
 
 ```ruby
-$ gem 'certify_design_system', git: 'git@github.com:USSBA/certify_design_system_gem.git', branch: 'master'
+gem 'certify_design_system', git: 'git@github.com:USSBA/certify_design_system_gem.git', branch: 'master'
 ```
 
 And then execute:
 
-```
+```bash
 $ bundle
 ```
 
@@ -50,12 +50,13 @@ For tests Jekyll, Capybara and Rails are dependencies. Test-only dependencies ar
 
 To build a gem run the rake build command:
 
-```
+```bash
 $ bundle exec rake build
 ```
 
 To install the gem locally (replace `0.0.0` with actual build numbers):
-```
+
+```bash
 $ gem install ./pkg/certify_design_system-0.0.0.gem
 ```
 
