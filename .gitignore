@@ -12,3 +12,4 @@ tmp/*.png
 test/dummy_jekyll/assets/bourbon
 test/dummy_jekyll/.jekyll-cache
 test/dummy_jekyll/delete
+pkg/
