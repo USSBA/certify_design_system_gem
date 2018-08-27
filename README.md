@@ -24,13 +24,13 @@ Add this line to your application's Gemfile:
 For Development use the unpacked gem:
 
 ```ruby
-gem 'certify_design_system', path: "#{path_to_upacked_gem_files}"
+$ gem 'certify_design_system', path: "#{path_to_upacked_gem_files}"
 ```
 
 Or use the GitHub Repository:
 
 ```ruby
-gem 'certify_design_system', git: 'git@github.com:USSBA/certify_design_system_gem.git', branch: 'master'
+$ gem 'certify_design_system', git: 'git@github.com:USSBA/certify_design_system_gem.git', branch: 'master'
 ```
 
 And then execute:
