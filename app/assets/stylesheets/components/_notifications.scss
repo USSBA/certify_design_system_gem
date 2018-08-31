@@ -1,0 +1,80 @@
+.sba-c-notifications-drawer-outer-container {
+  @include display(flex);
+  width: 100%;
+
+  @media (min-width: $width-sm) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $content-max-width;
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+  }
+}
+
+.sba-c-notifications-drawer-container {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $width-sm) {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: 16px;
+  }
+}
+
+
+
+.sba-c-notifications-drawer {
+  background: $color-primary-darker;
+  width: 100%;
+  padding: $multiple $multiple 0;
+  position: absolute;
+  z-index: 30000;
+}
+
+.sba-c-notifications-drawer__list {
+  max-height: 25rem;
+  overflow-y: scroll;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sba-c-notifications-drawer__link {
+  background: #fff;
+  display: block;
+  padding: $multiple * 2;
+  text-decoration: none;
+}
+
+.sba-c-notifications-drawer__link:hover .sba-c-notifications-drawer__message {
+  text-decoration: underline;
+}
+
+.sba-c-notifications-drawer__message {
+  color: $color-base;
+  font-size: 1.5rem;
+  font-weight: $font-bold;
+  margin: 0;
+}
+
+.sba-c-notifications-drawer__timestamp {
+  color: $color-gray;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.sba-c-notifications-drawer__view-all {
+  color: #fff;
+  display: block;
+  font-weight: $font-bold;
+  line-height: 1;
+  padding: $multiple * 2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sba-c-notifications-drawer__view-all:hover {
+  color: #fff;
+  text-decoration: underline;
+}
