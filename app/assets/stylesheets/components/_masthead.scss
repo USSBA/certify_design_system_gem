@@ -362,6 +362,7 @@
   padding-bottom: $multiple * 2;
   position: absolute;
   width: 100%;
+  z-index: 3000;
 }
 
 .sba-c-mastead__search-form {
