@@ -1,0 +1,100 @@
+.sba-c-tabs__list {
+  list-style: none;
+  margin: 0 0 -1px 0;
+  padding: 0;
+}
+
+.sba-c-tabs__item {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.sba-c-tabs__link,
+.sba-c-tabs__link:visited {
+  background-color: rgba(0,0,0,.05);
+  color: $color-gray;
+  font-weight: $font-bold;
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  padding: $multiple * 2;
+  text-decoration: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  position:relative;
+}
+
+.sba-c-tabs__link:hover,
+.sba-c-tabs__link:active,
+.sba-c-tabs__link:focus {
+  background-color: rgba(0,0,0,.075);
+  color: $color-primary;
+}
+
+.sba-c-tabs__link.current {
+  color: $color-base;
+  background: #ffffff;
+  border: 1px solid $color-gray-lighter;
+  border-bottom: 0;
+}
+
+.sba-c-tabs__link.current:before {
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background-color: $color-green;
+  width: 100%;
+}
+
+.sba-c-tabs__link[aria-expanded="true"],
+.sba-c-tabs__link[aria-expanded="false"] {
+  background-image: url(angle-arrow-down.png);
+  background-image: url(angle-arrow-down.svg);
+  background-position: right 1.2rem top 50%;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  padding-right: 3rem;
+}
+
+.sba-c-tabs__link[aria-expanded="true"] {
+  background-color: $color-primary-darkest;
+  background-image: url(angle-arrow-down-hover.png);
+  background-image: url(angle-arrow-down-hover.svg);
+  color: #ffffff;
+}
+
+.sba-c-tabs__submenu {
+  margin: 0;
+  list-style-type: none;
+  padding: $multiple * 2 0;
+  background-color: $color-primary-darkest;
+  min-width: 21.5rem;
+  width: auto;
+  position: absolute;
+}
+
+.sba-c-tabs__submenu__item {
+  margin: 0;
+  padding: 0;
+}
+
+.sba-c-tabs__submenu__link {
+  font-size: 1.5rem;
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+  padding: $multiple / 2 $multiple * 2;
+}
+
+.sba-c-tabs__submenu__link:visited {
+  color: #ffffff;
+}
+
+.sba-c-tabs__submenu__link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

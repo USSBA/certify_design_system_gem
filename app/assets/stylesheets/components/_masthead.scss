@@ -386,6 +386,37 @@
   padding-right: 16px;
 }
 
+// Midsection
+.sba-c-masthead__midsection {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.sba-c-masthead__primary-heading {
+  font-size: 3.2rem;
+  margin: 0;
+}
+
+.sba-c-masthead__primary-heading--l2 {
+  display: block;
+  color: $color-gray;
+  font-size: 2.4rem;
+  font-weight: normal;
+
+  @include media($width-md){
+    display: inline-block;
+    font-size: 3.2rem;
+
+    &:before {
+      content: " | "
+    }
+  }
+}
+
+.sba-c-masthead__midsection__info {
+  font-size: 1.6rem;
+}
+
 // Animation for mobile nav
 @include keyframes(slideIn) {
   from {
