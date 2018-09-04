@@ -6,7 +6,8 @@
 
 .sba-c-tabs__item {
   display: inline-block;
-  margin: 0;
+  font-size: 0;
+  margin: 0 $multiple / 4 0 0;
   padding: 0;
 }
 
@@ -75,6 +76,7 @@
   min-width: 21.5rem;
   width: auto;
   position: absolute;
+  z-index: 30000;
 }
 
 .sba-c-tabs__submenu__item {
@@ -97,4 +99,79 @@
 .sba-c-tabs__submenu__link:hover {
   color: #ffffff;
   text-decoration: underline;
+}
+
+
+
+.nav__dropdown-toggle {
+  @extend .sba-c-tabs__link;
+  display: inline-block;
+  width: auto !important;
+  margin: 0 0 -1px 0;
+}
+
+.nav__dropdown-toggle:after {
+  content: " + ";
+}
+
+
+/*
+ * Core styles for PriorityNav.js
+ * These styles are not optional and should always be included
+ *
+ * Free to use under the MIT License.
+ * http://twitter.com/GijsRoge
+ */
+
+.priority-nav{
+
+  white-space: nowrap; // prevent flash of unstyled content
+
+  /*
+    * Makes sure the menu's are inline-block so they don't take up
+    * the entire width of its parent. This will break the plugin.
+    */
+  > ul{
+    display: inline-block;
+    > li{
+      display: inline-block;
+    }
+  }
+  &-has-dropdown{
+    .priority-nav{
+      &__dropdown{
+        &-toggle{
+          position: relative;
+        }
+      }
+    }
+  }
+  &__wrapper{
+    position: relative;
+  }
+  &__dropdown{
+    background: #fff;
+    position: absolute;
+    visibility: hidden;
+    right: 0;
+    z-index: 40000;
+    margin: 0;
+    padding: $multiple;
+    &.show{
+      visibility: visible;
+    }
+    &-toggle{
+      visibility: hidden;
+      position: absolute;
+    }
+    > li {
+      display:  block;
+    }
+  }
+  &-is-visible{
+    visibility: visible;
+  }
+  &-is-hidden{
+    visibility: hidden;
+  }
 }
