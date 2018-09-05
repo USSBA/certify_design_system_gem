@@ -272,6 +272,7 @@
   @include media($nav-width) {
     background-image: none;
     border: none;
+    padding-left: $multiple * 2;
     padding-right: $multiple * 2;
   }
 }
