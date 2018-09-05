@@ -6,21 +6,23 @@ The Merriweather font files are from [Google Web Fonts](https://fonts.google.com
 
 The Source Sans Pro font files are from [Google Web Fonts](https://fonts.google.com/specimen/Source+Sans+Pro), licensed under the [Open Font License](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web).
 
-### Licencsed Under Creative Commons 
+### Licencsed Under Creative Commons
 
 The SVG Sprite Icons are from [Font Awesome (version 5)](https://fontawesome.com/), license under the [Creative Commons: Attribution v4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ### Public Domain Under Creative Commons Zero
 
-The [svg4everybody](https://github.com/jonathantneal/svg4everybody) is public domain under creative commons's public doman zero [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode). Here is a [human readable summary](https://creativecommons.org/publicdomain/zero/1.0/). 
+The [svg4everybody](https://github.com/jonathantneal/svg4everybody) is public domain under creative commons's public doman zero [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode). Here is a [human readable summary](https://creativecommons.org/publicdomain/zero/1.0/).
 
-The [JQueryUI](https://github.com/jquery/jquery-ui) is licenced under creative commons's public domain zero [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode). 
+The [JQueryUI](https://github.com/jquery/jquery-ui) is licenced under creative commons's public domain zero [CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
 ### Licensed under the MIT License
 
-The Certify Design System gem's Ruby code is licensed under the [MIT](https://opensource.org/licenses/MIT). A copy of that license is distributed with this software. 
+The Certify Design System gem's Ruby code is licensed under the [MIT](https://opensource.org/licenses/MIT). A copy of that license is distributed with this software.
 
-Twitter's [Bootstrap Gem](https://github.com/twbs/bootstrap-rubygem), which is also licensed under the MIT licencse, served as inspiration for parts of the Ruby code.
+Twitter's [Bootstrap Gem](https://github.com/twbs/bootstrap-rubygem), which is also licensed under the MIT license, served as inspiration for parts of the Ruby code.
+
+[Priority Navigation JS](https://github.com/gijsroge/priority-navigation) is licensed under MIT. A copy of the license can be found [here](https://github.com/gijsroge/priority-navigation/blob/master/LICENSE).
 
 ### Other files
 
@@ -50,6 +52,6 @@ Unless expressly stated otherwise, the person who associated a work with this de
 
 ### Contributions to this project
 
-Contributions to the Ruby Code will be covered by the MIT license. 
+Contributions to the Ruby Code will be covered by the MIT license.
 
 All other contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of copyright interest.
