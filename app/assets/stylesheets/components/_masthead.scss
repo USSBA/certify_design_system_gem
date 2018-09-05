@@ -42,7 +42,7 @@
   background-color: $color-primary;
   color: #ffffff;
   font-size: 1.3rem;
-  height: 4rem;
+  height: 4.4rem;
   line-height: 4rem;
   text-align: center;
   text-decoration: none;
@@ -74,12 +74,19 @@
 .sba-c-mobile-header__list-item .sba-c-button {
   color: #ffffff;
   border: none;
+  border-radius: 0;
+  height: 4.4rem;
+  margin: 0;
   padding: .6rem .8rem;
 
   svg {
     width: .8em;
     height: .8em;
   }
+}
+
+.sba-c-mobile-header__list-item .sba-c-button[aria-expanded="true"] {
+  background-color: $color-primary-darker;
 }
 
 // Top Level Navigation
