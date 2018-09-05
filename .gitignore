@@ -4,6 +4,9 @@
 .DS_Store
 _site
 Gemfile.lock
+.yardoc
+doc
+pkg
 test/dummy_rails/public/assets/*
 test/dummy_rails/tmp/*
 test/dummy_rails/log/*

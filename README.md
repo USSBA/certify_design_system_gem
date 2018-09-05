@@ -1,9 +1,11 @@
 # Certify Design System Gem
-Certify Design System Gem
-This gem supplies the Certify Design System Assets to either Jekyll or Rails applications.
+
+Certify Design System Gem  
+This gem supplies the Certify Design System Assets to either Jekyll or Rails applications.  
 More info on Design System can be found at the [Design System Documentation Site](https://ussba.github.io/certify-design-system-documentation/).
 
-### Table of Contents
+
+## Table of Contents
 
 - Installation
     - Requirements
@@ -54,6 +56,9 @@ $ bundle exec rake build
 ```
 
 ## Usage
+
+Instructions on how to use the Certify Design System components can be found at the [Design System Documentation Site](https://ussba.github.io/certify-design-system-documentation/).
+
 ### Rails
 
 #### Javascript
