@@ -1,0 +1,93 @@
+/*
+Mobile header
+
+The mobile header appears at narrow screen widths
+*/
+
+.sba-c-mobile-header {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(space-between);
+  background: $color-primary-darkest;
+  width: 100%;
+
+  @include media($nav-width) {
+    display: none;
+  }
+}
+
+.sba-c-masthead--vendor .sba-c-mobile-header {
+  background: $color-base;
+}
+
+// Mobile header
+.sba-c-mobile-header__logo-container {
+  padding-left: $multiple * 2;
+  padding-right: $multiple * 2;
+}
+
+.sba-c-mobile-header__logo {
+  @include flex-shrink(0);
+  display: block;
+  margin-top: 3px;
+  width: 13rem;
+}
+
+.sba-c-mobile-header__button {
+  @include flex-shrink(0);
+  border: 0;
+  border-radius: 0;
+  font-weight: $font-normal;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-font-smoothing: auto;
+  background-color: $color-primary;
+  color: #ffffff;
+  font-size: 1.3rem;
+  height: 4.4rem;
+  line-height: 4rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 5.8rem;
+}
+
+.sba-c-mobile-header__list {
+  @include display(flex);
+  margin: 0 $multiple 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.sba-c-mobile-header__list-item {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.sba-c-mobile-header__list-item .sba-c-badge {
+  display: inline-block;
+  position: absolute;
+  right: .3rem;
+  top: $multiple;
+  z-index: 200;
+}
+
+.sba-c-mobile-header__list-item .sba-c-button {
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  height: 4.4rem;
+  margin: 0;
+  padding: .6rem .8rem;
+
+  svg {
+    width: .8em;
+    height: .8em;
+  }
+}
+
+.sba-c-mobile-header__list-item .sba-c-button[aria-expanded="true"] {
+  background-color: $color-primary-darker;
+}

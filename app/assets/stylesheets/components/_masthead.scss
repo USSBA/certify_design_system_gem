@@ -1,0 +1,40 @@
+.sba-c-masthead {
+  background: $color-gray-lightest;
+  border-bottom: 1px solid $color-gray-lighter;
+  margin: 0 0 2.35em;
+  position: relative;
+}
+
+
+
+
+// Masthead Body
+.sba-c-masthead__body {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.sba-c-masthead__primary-heading {
+  font-size: 3.2rem;
+  margin: 0;
+}
+
+.sba-c-masthead__primary-heading--l2 {
+  display: block;
+  color: $color-gray;
+  font-size: 2.4rem;
+  font-weight: normal;
+
+  @include media($width-md){
+    display: inline-block;
+    font-size: 3.2rem;
+
+    &:before {
+      content: " | "
+    }
+  }
+}
+
+.sba-c-masthead__body__info {
+  font-size: 1.6rem;
+}
