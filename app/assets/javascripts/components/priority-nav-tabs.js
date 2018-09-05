@@ -5,9 +5,9 @@
  */
 
 $(function() {
-  var wrapper = document.querySelector("#tabs_wrapper");
+  var wrapper = document.querySelector(".sba-js-priority-nav-tabs");
   var nav = priorityNav.init({
-      mainNavWrapper: "#tabs_wrapper",
+      mainNavWrapper: ".sba-js-priority-nav-tabs",
       breakPoint: 0,
       throttleDelay: '50'
   });
