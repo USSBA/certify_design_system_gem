@@ -1,0 +1,404 @@
+// Top Level Navigation
+.sba-c-topnav {
+  @include flex-direction(column);
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  height: 100%;
+  width: 26rem;
+  background: #ffffff;
+  border-left: 1px solid #aeb0b5;
+  border-right: 0;
+  overflow-y: auto;
+  z-index: 9000;
+
+  @include media($nav-width){
+    @include display(flex);
+    @include flex-direction(row);
+    background: $color-primary-darkest;
+    border-left: 0;
+    overflow: visible;
+    position: static;
+    width: 100%;
+  }
+}
+
+.sba-c-topnav.is-visible {
+  @include animation-name(slideIn);
+  @include animation-duration(.3s);
+  @include animation-timing-function(ease-in-out);
+  @include display(flex);
+}
+
+
+.sba-c-topnav__inner {
+  @include display(flex);
+  @include flex-direction(column);
+  padding: $multiple * 2;
+
+  @include media($nav-width) {
+    @include flex-direction(row);
+    @include align-items(center);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $content-max-width;
+    padding: 0 $grid-gutter-width + $multiple * 2;
+    width: 100%;
+  }
+}
+
+.sba-c-topnav__logo-link {
+  @include flex-shrink(0);
+  margin-right: $multiple * 2;
+  display: none;
+
+  @include media($nav-width) {
+    display: block;
+  }
+}
+
+.sba-c-topnav__logo {
+  display: block;
+  height: 2.2rem;
+}
+
+.sba-c-topnav__close {
+  @include align-self(flex-end);
+  color: $color-gray;
+  margin-bottom: $multiple !important;
+  width: 4.4rem;
+
+  @include media($nav-width){
+    display: none;
+  }
+}
+
+.sba-c-topnav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  @include media($nav-width){
+    @include display(flex);
+    @include flex-direction(row);
+    width: auto;
+  }
+}
+
+.sba-c-topnav__list--right-side {
+  @include media($nav-width){
+    margin-left: auto;
+  }
+}
+
+.sba-c-topnav__list-item {
+  border-top: 1px solid $color-gray-medium;
+  margin: 0;
+  padding: 0;
+
+  @include media($nav-width){
+    border-top: none;
+    position: relative;
+  }
+}
+
+.sba-c-topnav__subnav-toggle {
+  background-color: transparent;
+  background-image: url(plus-alt.png);
+  background-image: url(plus-alt.svg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  border-radius: 0;
+  font-weight: $font-normal;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $color-base;
+  }
+}
+
+
+
+.sba-c-topnav__link,
+.sba-c-topnav__link:visited,
+.sba-c-topnav__subnav-toggle,
+.sba-c-topnav__subnav__link {
+  color: $color-base;
+  display: block;
+  line-height: 1;
+  padding: 1.2rem $multiple;
+  text-decoration: none;
+  width: 100%;
+
+  @include media($nav-width) {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: $font-bold;
+    padding: 2rem $multiple;
+  }
+
+  @include media($width-xl) {
+    font-size: 1.5rem;
+    padding: 2rem $multiple * 2;
+  }
+}
+
+.sba-c-topnav__subnav__link {
+  padding-left: $multiple * 4;
+}
+
+.sba-c-topnav__link:hover,
+.sba-c-topnav__link:hover:visited,
+.sba-c-topnav__subnav-toggle:hover,
+.sba-c-topnav__subnav-toggle:active,
+.sba-c-topnav__subnav-toggle:focus,
+.sba-c-topnav__subnav__link:hover,
+.sba-c-topnav__subnav__link:visited,
+.sba-c-topnav__subnav__link:hover:visited {
+  background-color: $color-gray-lightest;
+  color: $color-primary-darker;
+
+  @include media($nav-width) {
+    background-color: $color-primary-darker;
+    color: #ffffff;
+  }
+}
+
+.sba-c-topnav__subnav-toggle {
+  @include media($nav-width) {
+    background-image: url(angle-arrow-down-hover.png);
+    background-image: url(angle-arrow-down-hover.svg);
+    background-position: right 1.2rem top 50%;
+    padding-right: $multiple * 4;
+  }
+}
+
+.sba-c-topnav__subnav-toggle.sba-c-button--icon-only,
+.sba-c-topnav__subnav-toggle.sba-c-button--icon-only[aria-expanded="true"] {
+  @include media($nav-width) {
+    background-image: none;
+    border: none;
+    padding-left: $multiple * 2;
+    padding-right: $multiple * 2;
+  }
+}
+
+.sba-c-topnav__subnav-toggle[aria-expanded="true"] {
+  background-image: url(minus-alt.png);
+  background-image: url(minus-alt.svg);
+
+  @include media($nav-width) {
+    background-color: $color-primary-darker;
+    background-image: url(angle-arrow-down-hover.png);
+    background-image: url(angle-arrow-down-hover.svg);
+  }
+}
+
+.sba-c-topnav__list-item .sba-c-badge {
+  display: none;
+
+  @include media($nav-width) {
+    display: inline-block;
+    position: absolute;
+    right: $multiple;
+    top: $multiple * 2;
+    z-index: 200;
+  }
+}
+
+.sba-c-topnav__list-item--search,
+.sba-c-topnav__list-item--notifications {
+  display: none;
+
+  @include media($nav-width) {
+    display: block;
+  }
+}
+
+.sba-c-topnav__subnav {
+  font-size: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include media($nav-width) {
+    background-color: $color-primary-darker;
+    min-width: 21.5rem;
+    padding: $multiple 0;
+    position: absolute;
+    top: 100%;
+    z-index:10000;
+  }
+}
+
+.sba-c-topnav__subnav-item {
+  @include media($nav-width) {
+    margin: 0;
+  }
+}
+
+.sba-c-topnav__subnav__link {
+  @include media($nav-width) {
+    font-weight: $font-normal;
+    padding-left: $multiple * 2;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+}
+
+.sba-c-topnav__subnav__link:hover,
+.sba-c-topnav__subnav__link:visited,
+.sba-c-topnav__subnav__link:hover:visited {
+  @include media($nav-width) {
+    background-color: $color-primary-darkest;
+  }
+}
+
+.sba-c-topnav__subnav__link:hover {
+  text-decoration: underline;
+}
+
+
+// Search Form
+.sba-c-top-nav__search-outer-container {
+  position: relative;
+}
+
+.sba-c-top-nav__search-container {
+  background-color: $color-primary-darker;
+  padding-top: $multiple * 2;
+  padding-bottom: $multiple * 2;
+  position: absolute;
+  width: 100%;
+  z-index: 3000;
+}
+
+.sba-c-top-nav__search-form {
+  margin: 0 $multiple * 2;
+  position: relative;
+}
+
+.sba-c-top-nav__search-form input {
+  box-sizing: border-box;
+  max-width: none;
+  max-height: 4.4rem;
+  padding-right: 10rem;
+  width: 100%;
+}
+
+.sba-c-top-nav__search-form button {
+  position: absolute;
+  width: auto;
+  right: 0;
+  top: -2.3rem;
+  padding-left: 15px;
+  padding-right: 16px;
+}
+
+// Notifications drawer
+.sba-c-top-nav__notifications-drawer-outer-container {
+  @include display(flex);
+  width: 100%;
+
+  @media (min-width: $width-sm) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $content-max-width;
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+  }
+}
+
+.sba-c-top-nav__notifications-drawer-container {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $width-sm) {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: 16px;
+  }
+}
+
+.sba-c-top-nav__notifications-drawer {
+  background: $color-primary-darker;
+  width: 100%;
+  padding: $multiple $multiple 0;
+  position: absolute;
+  z-index: 30000;
+}
+
+.sba-c-top-nav__notifications-drawer__list {
+  max-height: 25rem;
+  overflow-y: scroll;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sba-c-top-nav__notifications-drawer__link {
+  background: #fff;
+  display: block;
+  padding: $multiple * 2;
+  text-decoration: none;
+}
+
+.sba-c-top-nav__notifications-drawer__link:hover .sba-c-top-nav__notifications-drawer__message,
+.sba-c-top-nav__notifications-drawer__link:focus .sba-c-top-nav__notifications-drawer__message {
+  color: $color-primary;
+  text-decoration: underline;
+}
+
+.sba-c-top-nav__notifications-drawer__message {
+  color: $color-base;
+  font-size: 1.5rem;
+  font-weight: $font-bold;
+  margin: 0;
+}
+
+.sba-c-top-nav__notifications-drawer__timestamp {
+  color: $color-gray;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.sba-c-top-nav__notifications-drawer__view-all {
+  color: #fff;
+  display: block;
+  font-weight: $font-bold;
+  line-height: 1;
+  padding: $multiple * 2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sba-c-top-nav__notifications-drawer__view-all:visited {
+  color: #ffffff;
+}
+
+.sba-c-top-nav__notifications-drawer__view-all:hover,
+.sba-c-top-nav__notifications-drawer__view-all:focus {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+// Animation for mobile nav
+@include keyframes(slideIn) {
+  from {
+    @include transform(translateX(26rem));
+  }
+  to {
+    @include transform(translateX(0));
+  }
+}

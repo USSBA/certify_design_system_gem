@@ -7,7 +7,7 @@ $(function() {
       $close_button = $('#close_menu_button'),
       $search_box = $('#topnav-search'),
       $notifications_box = $('#topnav-notifications-drawer'),
-      $notifications_drawer = $('.sba-c-notifications-drawer__list'),
+      $notifications_drawer = $('.sba-c-top-nav__notifications-drawer__list'),
       $nav_open_button = $('.sba-c-mobile-header__button'),
       $nav_close_button = $('.sba-c-topnav__close'),
       $nav = $('#top_navigation'),
@@ -19,6 +19,14 @@ $(function() {
     $box.attr("hidden", "").addClass(visible_class);
   };
 
+  var setFocus = function($this, $target){
+    if ($this.attr('aria-expanded') == "false") {
+      setTimeout(function(){
+        $target.focus();
+      }, 50);
+    }
+  }
+
   // Notification button
   $notifications_button.on('click', function(){
     // Removes the notification pip
@@ -28,11 +36,7 @@ $(function() {
     hideItems($search_button, $search_box);
 
     // Focus on first link
-    if ($(this).attr('aria-expanded') == "false") {
-      setTimeout(function(){
-        $notifications_drawer.focus();
-      }, 50);
-    }
+    setFocus($(this), $notifications_drawer);
     return false;
   });
 
@@ -43,11 +47,7 @@ $(function() {
     hideItems($notifications_button, $notifications_box);
 
     // Set focus when opening up the search box
-    if ($(this).attr('aria-expanded') == "false") {
-      setTimeout(function(){
-        $search_input.focus();
-      }, 50);
-    }
+    setFocus($(this), $search_input);
 
     return false;
 
