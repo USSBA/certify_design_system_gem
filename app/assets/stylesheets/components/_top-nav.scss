@@ -26,6 +26,12 @@
   }
 }
 
+.sba-c-masthead--vendor .sba-c-topnav {
+  @include media($nav-width) {
+    background-color: $color-base;
+  }
+}
+
 .sba-c-topnav.is-visible {
   @include animation-name(slideIn);
   @include animation-duration(.3s);
