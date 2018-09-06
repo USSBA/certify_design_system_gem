@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   
   spec.executables   = ["cds-gh-pages"]  
 
-  spec.add_runtime_dependency 'bourbon', '~> 4.3', '<= 5'
+  spec.add_runtime_dependency 'bourbon', '~> 4.3', '< 5'
   spec.add_runtime_dependency 'sass', '~> 3.5'
   ## requires JQuery
 
