@@ -107,7 +107,7 @@ Run asset precompile
 
 To use the SVGs in a Rails view, the rails `image_path` helper can be used inside an ERB code block.
 
-```
+```erb
 <svg aria-hidden="true" class="sba-c-icon sba-c-icon--gold">
   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=<%= "#{image_path('svg-sprite/sprite.svg')}#archive" %> ></use>
 </svg>
