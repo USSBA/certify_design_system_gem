@@ -5,13 +5,13 @@ require 'bourbon'
 require 'certify_design_system/sass'
 
 ## Certify Delivery System Gem
-# Creates Rails Engine or sets up assets for the Jekyll 'jekyll-assets' gem. 
+# Creates Rails Engine or sets up assets for the Jekyll 'jekyll-assets' gem.
 # @see https://ussba.github.io/certify-design-system-documentation/ Component Documentation
 module CertifyDesignSystem
   if defined?(::Rails)
 
     ## Creates a Rails Engine
-    # @note used only for rails. 
+    # @note used only for rails.
     class Engine < ::Rails::Engine
       isolate_namespace CertifyDesignSystem
 

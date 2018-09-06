@@ -31,7 +31,7 @@ module CertifyDesignSystem
     def fonts_path
       File.join gem_path, 'app/assets/fonts'
     end
-    
+
     # @note used for jekyll
     def images_path
       File.join gem_path, 'app/assets/images'
