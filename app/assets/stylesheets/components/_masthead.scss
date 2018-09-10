@@ -17,6 +17,10 @@
 .sba-c-masthead__primary-heading {
   font-size: 3.2rem;
   margin: 0;
+
+  > a {
+    display: inline-block;
+  }
 }
 
 .sba-c-masthead__primary-heading--l2 {
