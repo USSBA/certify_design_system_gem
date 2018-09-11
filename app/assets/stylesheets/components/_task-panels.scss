@@ -167,3 +167,34 @@
   margin: .8rem 2rem;
   text-transform: none;
 }
+
+// Tabs inside task panels
+.sba-c-task-panel__content.sba-c-task-panel__content--has-tabs {
+  width: 32rem;
+
+  &:after {
+    border-bottom-color: $color-gray-lightest;
+  }
+}
+
+.sba-c-task-panel .sba-c-tabs-wrapper {
+  background-color: $color-gray-lightest;
+  border-bottom: 1px solid $color-gray-lighter;
+}
+
+.sba-c-task-panel .sba-c-tabs__list {
+  @include display(flex);
+  padding-top: $multiple * 2;
+  padding-left: $multiple * 2;
+  padding-right: $multiple * 2;
+}
+
+.sba-c-task-panel .sba-c-tabs__link {
+  font-size: 1.2rem;
+  padding-top: $multiple;
+  padding-bottom: $multiple;
+}
+
+.sba-c-task-panel .sba-c-tabs__link.current::before {
+  height: 2px;
+}
