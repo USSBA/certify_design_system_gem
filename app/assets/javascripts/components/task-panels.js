@@ -1,7 +1,13 @@
 $(document).ready(function(){
   // Variables
-  var $task_panel_toggle = $('.sba-c-task-panel__toggle');
+  var $task_panel_toggle = $('.sba-c-task-panel__toggle'),
+      $task_panel = $('.sba-c-task-panel');
 
+  // Check if there are tabs and supply modifier class
+  if ( $('.sba-c-task-panel .sba-c-tabs-wrapper').length ) {
+    console.log($(this).id);
+    $(this).addClass = ('sba-c-task-panel--has-tabs');
+  }
 
   // Function for handling task panels
   $task_panel_toggle.on('click', function(){
@@ -38,6 +44,12 @@ $(document).ready(function(){
       $target.parent()
         .addClass(open_class);
       $target.addClass(visible_class);
+
+      // Check if has tabs to add has tabs class
+      if ($target.find($('.sba-c-tabs-wrapper')).length) {
+        $target.addClass('sba-c-task-panel__content--has-tabs');
+      }
+
       setTimeout(function(){
         $target.addClass(transition_class)
       }, 20);
