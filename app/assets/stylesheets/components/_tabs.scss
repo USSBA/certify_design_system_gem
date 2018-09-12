@@ -51,8 +51,8 @@
   width: 100%;
 }
 
-.sba-c-tabs__link[aria-expanded="true"],
-.sba-c-tabs__link[aria-expanded="false"] {
+.sba-c-tabs__link.sba-js-visibility-trigger[aria-expanded="true"],
+.sba-c-tabs__link.sba-js-visibility-trigger[aria-expanded="false"] {
   background-image: url(angle-arrow-down.png);
   background-image: url(angle-arrow-down.svg);
   background-position: right 1.2rem top 50%;
@@ -61,7 +61,7 @@
   padding-right: 3rem;
 }
 
-.sba-c-tabs__link[aria-expanded="true"] {
+.sba-c-tabs__link.sba-js-visibility-trigger[aria-expanded="true"] {
   background-color: $color-primary-darkest;
   background-image: url(angle-arrow-down-hover.png);
   background-image: url(angle-arrow-down-hover.svg);
@@ -101,18 +101,17 @@
   text-decoration: underline;
 }
 
-
-
-.nav__dropdown-toggle {
-  @extend .sba-c-tabs__link;
-  display: inline-block;
-  width: auto !important;
-  margin: 0 0 -1px 0;
+.sba-c-tabs__tab-content {
+  border: 1px solid $color-gray-lighter;
+  display: none;
 }
 
-.nav__dropdown-toggle:after {
-  content: " + ";
+.sba-c-tabs__tab-content.is-visible {
+  display: block;
 }
+
+
+
 
 
 /*
@@ -122,6 +121,17 @@
  * Free to use under the MIT License.
  * http://twitter.com/GijsRoge
  */
+
+ .nav__dropdown-toggle {
+   @extend .sba-c-tabs__link;
+   display: inline-block;
+   width: auto !important;
+   margin: 0 0 -1px 0;
+ }
+
+ .nav__dropdown-toggle:after {
+   content: " + ";
+ }
 
 .priority-nav{
 
