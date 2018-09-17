@@ -30,7 +30,7 @@ $(function() {
   // Notification button
   $notifications_button.on('click', function(){
     // Removes the notification pip
-    $('.notifications-pip').remove();
+    $('.sba-js-notifications-pip').remove();
 
     // Hide search if open
     hideItems($search_button, $search_box);
