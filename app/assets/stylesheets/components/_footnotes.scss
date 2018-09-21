@@ -1,0 +1,22 @@
+.sba-c-question-footnote {
+  background: $color-gray-lightest;
+  margin-top: $multiple * 6;
+  padding: $multiple * 3;
+  width: auto;
+
+  > ul,
+  > ol,
+  > p {
+    color: $color-base;
+    max-width: 750px;
+    max-width: 66ch;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sba-c-question-footnote__heading {
+  margin: 0;
+}

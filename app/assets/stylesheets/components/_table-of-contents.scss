@@ -1,0 +1,19 @@
+.sba-c-table-of-contents {
+  border: 1px solid $color-cool-blue-lighter;
+  padding: $multiple * 2;
+
+  .current {
+    color: $color-primary-darkest;
+    font-weight: $font-bold;
+  }
+}
+
+.sba-c-table-of-contents__heading {
+  font-weight: $font-bold;
+  margin-top: 0;
+}
+
+.sba-c-table-of-contents__list {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}

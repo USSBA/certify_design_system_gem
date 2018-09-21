@@ -53,11 +53,11 @@ $(document).ready(function() {
   // Handle Select Boxes
   var previous;
   $selectbox.on('click focus keydown', function(){
-    previous = $(this).find(':selected').attr('data-follow-up');
+    previous = $(this).find(':selected').attr('data-followup');
   }).change(function(){
-    var $control = $(this).find('option[data-follow-up]:selected'),
-        selected_val = $(this).find('option[data-follow-up]:selected').val(),
-        target = $(this).find(':selected').attr('data-follow-up');
+    var $control = $(this).find('option[data-followup]:selected'),
+        selected_val = $(this).find('option[data-followup]:selected').val(),
+        target = $(this).find(':selected').attr('data-followup');
     if ($(this).find(':selected').val() == selected_val) {
       showFollowup($control, $('#' + target));
     }
@@ -65,5 +65,5 @@ $(document).ready(function() {
       hideFollowup($control, $('#' + previous));
     }
   });
-
+  
 });

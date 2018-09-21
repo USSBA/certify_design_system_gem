@@ -1,3 +1,7 @@
+
+
+
+// These selectors can be deprecated when 8(a) is moved to microservices
 .sba-c-question-container {
   padding: $multiple * 10 0;
   border-bottom: 4px solid $color-gray-lighter;
@@ -39,39 +43,4 @@
   font-style: italic;
   padding-left: 3.5rem;
   margin-top: -.8rem;
-}
-
-.sba-c-question-footnote {
-  background: $color-primary-alt-lightest;
-  display: inline-block;
-  margin-top: $multiple * 3;
-  padding: $multiple * 3;
-  width: auto;
-
-  > ul,
-  > ol,
-  > p {
-    max-width: 750px;
-    max-width: 66ch;
-  }
-
-  > *:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.sba-c-follow-up {
-  border-left: 4px solid $color-gray-light;
-  margin: $multiple * 3 0 $multiple * 3 3.5rem;
-  padding: $multiple 0 $multiple 3.5rem;
-}
-
-.sba-c-follow-up--sm {
-  border-left-width: 2px;
-  margin: $multiple 0 $multiple * 3 3.5rem;
-  padding: 0 0 0 1.5rem;
-}
-
-.sba-c-question-footnote__heading {
-  margin: 0;
 }
