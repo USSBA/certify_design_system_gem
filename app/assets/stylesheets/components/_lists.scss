@@ -4,6 +4,22 @@
   padding-left: 0;
 }
 
+// Fields lists, to be used in forms
+.sba-c-fields-list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    margin: 3rem 0;
+  }
+}
+
+.sba-c-fields-list--condensed {
+  li {
+    margin: 1rem 0;
+  }
+}
+
 // Timeline
 .sba-c-timeline {
   font-size: 1.8rem;

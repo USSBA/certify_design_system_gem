@@ -1,0 +1,83 @@
+.sba-l-content-wrapper--form {
+  h1 {
+    margin-top: 0;
+  }
+
+  li,
+  p {
+    max-width: 75ch;
+  }
+
+  fieldset {
+    border-top: 3px solid $color-gray-lightest;
+    margin-top: 3rem;
+    padding: $multiple * 2 0;
+
+    legend {
+      font-size: 2.4rem;
+      margin: 1.5rem 0;
+    }
+
+    & > legend {
+      float: left;
+
+      + * {
+        clear: both;
+      }
+    }
+
+    p {
+      color: $color-gray;
+    }
+  }
+
+  label {
+    font-size: 2rem;
+    font-weight: $font-bold;
+    margin-top: 1.7rem;
+
+    ~ p,
+    ~ ul,
+    ~ li {
+      color: $color-gray;
+    }
+  }
+
+  [type="checkbox"] + label,
+  [type="radio"] + label {
+    @include transition(border-color .08s ease-in-out, background-color .08s ease-in-out);
+    border: 2px solid $color-gray-lighter;
+    border-radius: 4px;
+    font-weight: $font-normal;
+    margin-left: 0;
+    margin-top: 0;
+    padding: $multiple * 1.5 $multiple * 2;
+  }
+
+  [type="checkbox"] + label:hover,
+  [type="radio"] + label:hover {
+    background-color: $color-gray-lightest;
+  }
+
+  [type="checkbox"]:checked + label,
+  [type="radio"]:checked + label {
+    background-color: $color-primary-alt-lightest;
+    border-color: $color-primary-alt-light;
+    font-weight: $font-bold;
+  }
+
+  [type="checkbox"]:checked + label + .sba-c-follow-up,
+  [type="radio"]:checked + label + .sba-c-follow-up,
+  select + .sba-c-follow-up {
+    border-left: 2px solid $color-primary-alt-light;
+    margin-top: -1rem;
+    margin-left: 2.5rem;
+    padding: $multiple * 3 0 0 $multiple * 3;
+  }
+
+  select + .sba-c-follow-up {
+    border-color: $color-gray;
+    border-width: 1px;
+    margin-top: -4px;
+  }
+}
