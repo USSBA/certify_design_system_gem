@@ -16,7 +16,11 @@
     @include media($width-sm) {
       margin-left: $multiple;
     }
+  }
 
+  button[type="submit"] {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
   }
 
   .sba-c-button:first-child {
