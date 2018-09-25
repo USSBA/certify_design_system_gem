@@ -57,6 +57,7 @@
     border-top: 0;
     display: block;
     padding: 1.5rem;
+    vertical-align: top;
   }
 
   tbody th,
@@ -148,6 +149,16 @@
       }
     }
 
+    tfoot {
+
+      th,
+      td {
+        border-bottom: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+    }
+
     tbody {
       td:last-child {
         margin-bottom: 0;
@@ -206,9 +217,24 @@
     position: static;
 
     .sba-c-task-panel {
+      margin-top: -7px;
+      margin-bottom: -7px;
       position: relative;
       top: auto;
       right: auto;
     }
+  }
+
+  .sba-c-table--editable thead tr th:last-child {
+    width: 5.5rem;
+  }
+
+  .sba-c-table--editable thead tr th:last-child,
+  .sba-c-table--editable tbody tr td:last-child {
+    text-align: center;
+  }
+
+  .sba-c-table--editable tbody tr td:first-child {
+    text-align: left;
   }
 }
