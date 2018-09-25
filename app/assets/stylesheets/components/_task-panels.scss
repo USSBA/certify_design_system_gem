@@ -150,6 +150,21 @@
   top: 4.75rem;
 }
 
+.sba-c-task-panel .sba-c-task-panel__toggle--big {
+  height: auto;
+  padding: $multiple $multiple * 2;
+  width: auto;
+
+  svg {
+    fill: white;
+    width: 28px;
+  }
+}
+
+.sba-c-task-panel__toggle--big + .sba-c-task-panel__content {
+  right: 0;
+}
+
 .sba-c-task-panel__toggle--vertical {
   @include transform(rotate(90deg));
 }
