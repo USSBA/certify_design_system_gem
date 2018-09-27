@@ -34,6 +34,10 @@
   max-width: 41.6rem;
 }
 
+.ui-widget input.sba-c-combobox__input:invalid {
+  box-shadow: none;
+}
+
 .sba-c-combobox__toggle {
   background-color: #ffffff;
   background-image: url(arrow-down.png);
