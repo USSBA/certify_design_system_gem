@@ -1,0 +1,66 @@
+.sba-c-subquestionnaire-summary {
+  border-top: 2px solid $color-gray-light;
+  margin: $multiple * 4 0;
+}
+
+.sba-c-subquestionnaire-summary__item {
+  @include display(flex);
+  @include align-items(center);
+  padding: $multiple 0;
+}
+
+.sba-c-subquestionnaire-summary__name-container {
+  @include order(2);
+}
+
+.sba-c-subquestionnaire-summary__name {
+  font-size: 2.4rem;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.sba-c-subquestionnaire-summary__name__class {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: $color-gray-medium;
+  margin: 0;
+}
+
+.sba-c-subquestionnaire-summary__status-container {
+  @include order(1);
+  width: 7rem;
+
+  .sba-c-progress-indicator {
+    width: 4rem;
+  }
+}
+
+.sba-c-subquestionnaire-summary__update-container {
+  @include order(3);
+  color: $color-gray-medium;
+  text-align: right;
+  margin-left: auto;
+}
+
+
+.sba-c-subquestionnaire-summary__actions-container {
+  @include order(4);
+  text-align: right;
+  width: 4rem;
+}
+
+
+.sba-c-subquestionnaire-summary__item--sub {
+  border-top: 1px dashed $color-gray;
+
+  .sba-c-subquestionnaire-summary__name {
+    font-size: 1.7rem;
+  }
+}
