@@ -35,10 +35,16 @@
 
 .sba-c-subquestionnaire-summary__status-container {
   @include order(1);
-  width: 7rem;
+  width: 10rem;
+  padding-right: 16px;
 
-  .sba-c-progress-indicator {
-    width: 4rem;
+  .sba-c-tooltip-wrapper {
+    width: 100%;
+  }
+
+  .sba-c-badge {
+    width: 100%;
+    text-align: center;
   }
 }
 
