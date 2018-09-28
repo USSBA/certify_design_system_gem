@@ -41,10 +41,14 @@ Style guide: utilities.flexbox.justify-content
 */
 $_justify-content-values: (
   start: flex-start,
+  flex-start: flex-start,
   end: flex-end,
+  flex-end: flex-end,
   center: center,
   between: space-between,
-  around: space-around
+  space-between: space-between,
+  around: space-around,
+  space-around: space-around
 );
 
 @each $name in map-keys($_justify-content-values) {
@@ -102,7 +106,9 @@ Style guide: utilities.flexbox.align-items
 */
 $_align-items-values: (
   start: flex-start,
+  flex-start: flex-start,
   end: flex-end,
+  flex-end: flex-end,
   center: center,
   baseline: baseline,
   stretch: stretch
@@ -183,7 +189,7 @@ Markup:
 
 Style guide: utilities.flexbox.flex-wrap
 */
-$_flex-wrap-values: (nowrap: nowrap, wrap: wrap, reverse: wrap-reverse);
+$_flex-wrap-values: (nowrap: nowrap, wrap: wrap, reverse: wrap-reverse, wrap-reverse: wrap-reverse);
 
 @each $name in map-keys($_flex-wrap-values) {
   $value: map-get($_flex-wrap-values, $name);
