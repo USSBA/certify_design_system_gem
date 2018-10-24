@@ -1,0 +1,88 @@
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+
+### YAML Anchors for reuse
+branches_ignore_all: &branches_ignore_all
+  branches:
+    ignore:
+      - /.*/
+tags_release: &tags_release
+  tags:
+    only:
+      # In form of "v1.22.333" or "1.22.333"
+      - /^v?[0-9]+\.[0-9]+\.[0-9]+/
+filters_build_on_release_tag: &filters_build_on_release_tag
+  filters:
+    <<: *branches_ignore_all
+    <<: *tags_release
+build_with_ruby_image: &build_with_ruby_image
+  docker:
+    - image: ussba/cc-ruby:2.5
+
+workflows:
+  version: 2
+  build-gem:
+    jobs:
+      - deploy-gem:
+          context: certify-gembuilder
+          <<: *filters_build_on_release_tag
+
+### JOBS ###
+jobs:
+  deploy-gem:
+    <<: *build_with_ruby_image
+    steps:
+      - checkout
+      - run:
+          name: configure geminabox
+          command: |
+            bundle config "${GEMINABOX_DOMAIN}" "${GEMINABOX_WRITE_KEY}"
+            mkdir -p ~/.gem
+            echo ":host: https://${GEMINABOX_WRITE_KEY}@${GEMINABOX_DOMAIN}" >> ~/.gem/geminabox
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Gemfile" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run:
+          name: install dependencies
+          command: |
+            gem install parse_gemspec-cli
+            gem install geminabox
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile" }}
+      - run:
+          name: test version tag matches gemspec
+          command: |
+            GEMSPEC_FILE="$(ls ./*.gemspec)" #If multiple gemspec files, hard-code the correct one here
+            GEMSPEC_VERSION="$(parse-gemspec-cli ${GEMSPEC_FILE} | jq -r .version)"
+            CIRCLE_TAG_NO_V="$(echo $CIRCLE_TAG | sed 's/^v//')"
+            if [ "${GEMSPEC_VERSION}" != "${CIRCLE_TAG_NO_V}" ]; then
+              echo "FATAL: Could not match .gemspec version [${GEMSPEC_VERSION}] to CIRCLE_TAG (with v stripped) [${CIRCLE_TAG_NO_V}]";
+              exit 10
+            else
+              echo "export GEMSPEC_FILE=${GEMSPEC_FILE}" >> $BASH_ENV
+              echo "export GEMSPEC_VERSION=${GEMSPEC_VERSION}" >> $BASH_ENV
+            fi
+      - run:
+          name: running spec tests
+          command: |
+            if [ ! -d "./spec" ]; then
+              echo "WARN: no spec/ directory, cannot run tests on this repository.  you may want to fix this"
+            else
+              rspec spec
+            fi
+      - run:
+          name: building gem
+          command: gem build ${GEMSPEC_FILE}
+      - deploy:
+          name: pushing gem to geminabox
+          command: gem inabox ./*-${GEMSPEC_VERSION}.gem
+
