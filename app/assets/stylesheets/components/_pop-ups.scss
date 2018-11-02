@@ -1,11 +1,11 @@
 /* Popup container */
 .sba-c-popup {
-  border: 1px solid #aeb0b5;
+  border: 1px solid $color-sba-gray;
   border-bottom: none;
   display: none;
   background: white;
   max-height: 85%;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .sba-c-popup__toggle {
@@ -14,11 +14,9 @@
 
 /* The contents of the popup */
 .sba-c-popup .sba-c-popup__contents {
-  border: 1px solid #aeb0b5;
   border-bottom: none;
   background: white;
   max-height: 85%;
-  overflow-y: scroll;
 }
 
 /* Toggle this class - hide and show the popup */
@@ -42,7 +40,6 @@
 }
 
 .sba-c-popup__header h4 {
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   margin: 0;
 }
 
