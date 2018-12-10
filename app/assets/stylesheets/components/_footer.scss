@@ -2,25 +2,3 @@
   background: rgba(255,255,255,1);
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(245,245,245,1) 100%);
 }
-
-.sba-footer-social_links--wrapper {
-  justify-content: flex-start;
-}
-
-a.usa-link-facebook,
-a.usa-link-twitter,
-a.usa-link-youtube {
-  margin: 0 !important;
-}
- @media (min-width: 768px) {
-  .sba-footer-social_links--wrapper {
-    justify-content: flex-end;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  .usa-link-facebook,
-  .usa-link-twitter,
-  .usa-link-youtube {
-    left: -2rem !important;
-  }
- }
