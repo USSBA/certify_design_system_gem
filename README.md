@@ -1,7 +1,7 @@
 # Certify Design System Gem
 
-Certify Design System Gem  
-This gem supplies the Certify Design System Assets to either Jekyll or Rails applications.  
+Certify Design System Gem
+This gem supplies the Certify Design System Assets to either Jekyll or Rails applications.
 More info on Design System can be found at the [Design System Documentation Site](https://ussba.github.io/certify-design-system-documentation/).
 
 
@@ -42,10 +42,15 @@ $ bundle
 ```
 ### Requirements
 
-This gem requires [Bourbon 4](https://github.com/thoughtbot/bourbon/tree/v4-stable) (see also [Bourbon 4 Docs](https://www.bourbon.io/docs/4/)), [JQuery](https://jquery.com/) and [Sass](https://github.com/sass/sass). Some components may require [JQueryUI](https://jqueryui.com) as well.   
-**note: The gem has hard dependencies on the bourbon and sass gems but __not__ the JQuery gem, as JQuery can be required through CDN ([Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)) instead. The same is the case with JQueryUI, which can be added manualy or though CDN. 
+* [USWDS](https://designsystem.digital.gov)
+* [Bourbon 4](https://github.com/thoughtbot/bourbon/tree/v4-stable)
+* [JQuery](https://jquery.com/)
+* [Sass](https://github.com/sass/sass)
+* Some components may require [JQueryUI](https://jqueryui.com)
 
-For tests Jekyll, Capybara and Rails are dependencies. Test-only dependencies are listed on the Gemfile but absent from the `gemspec` since using it in rails doesn't require Jekyll be loaded and vice-versa. 
+**note: The gem has hard dependencies on the bourbon and sass gems but __not__ the JQuery gem, as JQuery can be required through CDN ([Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)) instead. The same is the case with JQueryUI, which can be added manualy or though CDN.
+
+For tests Jekyll, Capybara and Rails are dependencies. Test-only dependencies are listed on the Gemfile but absent from the `gemspec` since using it in rails doesn't require Jekyll be loaded and vice-versa.
 
 ### Building
 
@@ -71,9 +76,9 @@ gem 'jquery-rails'
 
 Add the following to application.js on the Rails application (JQuery must be required above the gem)
 
-```javascript 
+```javascript
 //= require jquery
-//= require cds	
+//= require cds
 ```
 
 #### Stylesheets
@@ -87,7 +92,7 @@ gem 'sass-rails'
 Add the following to `application.css.scss` on the Rails application
 
 ```sass
-@import 'cds'; 
+@import 'cds';
 ```
 
 Because the bourbon version required is old the gem sets this variable:
@@ -116,7 +121,7 @@ To use the SVGs in a Rails view, the rails `image_path` helper can be used insid
 
 ### Jekyll
 
-Add gem to your `Gemfile` under jekyll_plugins.  This gem requires `jekyll-assets` and it must be loaded before in the Gemfile. 
+Add gem to your `Gemfile` under jekyll_plugins.  This gem requires `jekyll-assets` and it must be loaded before in the Gemfile.
 
 ```ruby
 group :jekyll_plugins do
@@ -132,10 +137,10 @@ Add this to your `_config.yml`:
 plugins:
   - jekyll-assets
   - bourbon
-  
-assets: 
+
+assets:
   digest: false
-  sources: 
+  sources:
     - app/assets/javascripts
     - app/assets/stylesheets
     - app/assets/fonts
@@ -145,7 +150,7 @@ assets:
 
 See the documentation on the jekyll-assets gem for more details.
 
-Make sure to require JQuery before any of the javascript resources. 
+Make sure to require JQuery before any of the javascript resources.
 You can use JQuery's [CDN](https://code.jquery.com/):
 
 ```html
@@ -186,23 +191,23 @@ Additionally all the fonts need to me added individually:
 
 ### Using Firefox headless instead of Chrome.
 
-Firefox may provide a more consistent experience for testing accross environments as its screenshots are the same size regardless of retina display. 
+Firefox may provide a more consistent experience for testing accross environments as its screenshots are the same size regardless of retina display.
 
-Install the [geckodriver](https://github.com/mozilla/geckodriver/releases): 
+Install the [geckodriver](https://github.com/mozilla/geckodriver/releases):
 `brew install geckodriver`
 
-Make sure you don't have the gem: `geckodriver-helper` installed. If you have it installed you must uninstall it for Firefox to work. 
+Make sure you don't have the gem: `geckodriver-helper` installed. If you have it installed you must uninstall it for Firefox to work.
 
-Add this to `test_helper_rails.rb` and remove Chrome sections: 
+Add this to `test_helper_rails.rb` and remove Chrome sections:
 
-```ruby 
+```ruby
 Capybara.register_driver :firefox_headless do |app|
   options = ::Selenium::WebDriver::Firefox::Options.new
-  options.args << '--headless' 
+  options.args << '--headless'
   options.args << '--marionette'
 
-  Capybara::Selenium::Driver.new(app, 
-    browser: :firefox, 
+  Capybara::Selenium::Driver.new(app,
+    browser: :firefox,
     marionette: true,
     options: options)
 end
@@ -210,10 +215,10 @@ Selenium::WebDriver::Firefox::Binary.path = "#{path_to_firefox_executable}"
 Capybara.javascript_driver = :firefox_headless
 ```
 
-The path to the firefox executable is different for every machine, for example: 
+The path to the firefox executable is different for every machine, for example:
 `"/Applications/FirefoxDeveloperEdition.app/Contents/MacOS/firefox"`.
 
-Then switch Capybara's js driver: 
+Then switch Capybara's js driver:
 
 ```ruby
 Capybara.configure do |config|
@@ -226,11 +231,11 @@ end
 ```
 
 Note:
-- The `test_json_asset_manifest` test may not work with _Firefox Developer Edition_ due to the way it renders JSON so use a text rendering for the JSON instead. Using text instead. 
-- Setting the binary for Firefox is not ideal. 
+- The `test_json_asset_manifest` test may not work with _Firefox Developer Edition_ due to the way it renders JSON so use a text rendering for the JSON instead. Using text instead.
+- Setting the binary for Firefox is not ideal.
 
 
-#### Importing as Sass. 
+#### Importing as Sass.
 
 If you wish to use  the variables in the scss, be aware that that if you import `cds.scss` from a scss file it will look for the fonts where ever that file sits.
 
@@ -246,18 +251,18 @@ body {
 }
 ````
 
-Then the fonts search for in `assets/stylesheets` thus you'll have to load them manually there. 
+Then the fonts search for in `assets/stylesheets` thus you'll have to load them manually there.
 
 
 ## Testing
 
-Run `bundle install` and `bundle exec rake test` to run all tests. 
+Run `bundle install` and `bundle exec rake test` to run all tests.
 
 ## Changelog
-This gem uses semantic versioning. Version is stored in `lib/certify_design_system/version.rb`.  
+This gem uses semantic versioning. Version is stored in `lib/certify_design_system/version.rb`.
 Please look at the [releases page](https://github.com/USSBA/certify_design_system_gem/releases) for information on the version releases.
 
-## License 
+## License
 
 Please look at [LICENSES.md](/LICENSES.md) for full License information.
 
