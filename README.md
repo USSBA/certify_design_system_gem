@@ -48,7 +48,7 @@ $ bundle
 * [Sass](https://github.com/sass/sass)
 * Some components may require [JQueryUI](https://jqueryui.com)
 
-**note: The gem has hard dependencies on the bourbon and sass gems but __not__ the JQuery gem, as JQuery can be required through CDN ([Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)) instead. The same is the case with JQueryUI, which can be added manualy or though CDN.
+**note: The gem has hard dependencies on the bourbon and sass gems but __not__ the JQuery gem, as JQuery can be required through CDN ([Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)) instead. The same is the case with JQueryUI, which can be added manualy or though CDN.**
 
 For tests Jekyll, Capybara and Rails are dependencies. Test-only dependencies are listed on the Gemfile but absent from the `gemspec` since using it in rails doesn't require Jekyll be loaded and vice-versa.
 
