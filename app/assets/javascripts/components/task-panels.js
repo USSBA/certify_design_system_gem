@@ -23,12 +23,13 @@ $(document).ready(function(){
         visible_class = "visible";
 
     // First Let's Close any open task panels
-    $('.sba-c-task-panel__toggle').not(panel)
-      .attr("aria-expanded","false")
-      .parent()
-        .removeClass(open_class)
-          .find($task_panel_content)
-            .removeClass(transition_class);
+    // Comment out by KC
+    // $('.sba-c-task-panel__toggle').not(panel)
+    //   .attr("aria-expanded","false")
+    //   .parent()
+    //     .removeClass(open_class)
+    //       .find($task_panel_content)
+    //         .removeClass(transition_class);
 
     $task_panel_toggle.not(panel)
       .one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
